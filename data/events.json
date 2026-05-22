@@ -1,0 +1,172 @@
+{
+  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD.",
+
+  "events": [
+    {
+      "id": "japan-sushi-2026",
+      "title": "Japan Day — Sushi Stories",
+      "emoji": "🍣",
+      "date": "2026-08-02",
+      "location": "Location TBA",
+      "audience": "Family-friendly",
+      "description": "Travel to Japan through one of the world's most iconic foods. Older kids share the story of sushi — from a way to preserve fish, to the colorful art it is today — and then teach everyone how to roll their own.",
+      "ingredients": [
+        "Sushi rice",
+        "Rice vinegar",
+        "Nori (seaweed)",
+        "Cucumber",
+        "Avocado",
+        "Imitation crab or smoked salmon",
+        "Soy sauce, wasabi, pickled ginger"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "italy-tiramisu-2026",
+      "title": "Italy Day — Tiramisu Tales",
+      "emoji": "🍰",
+      "date": "2026-09-06",
+      "location": "Location TBA",
+      "audience": "Family-friendly",
+      "description": "Espresso, mascarpone, cocoa and a name that means \"pick me up.\" We'll explore Italian café culture and layer up our own tiramisu together.",
+      "ingredients": [
+        "Mascarpone cheese",
+        "Eggs",
+        "Sugar",
+        "Ladyfingers (savoiardi)",
+        "Strong espresso (cooled)",
+        "Cocoa powder",
+        "Optional: a splash of vanilla"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "mexico-taco-2026",
+      "title": "Mexico Day — Taco Time & Día de los Muertos",
+      "emoji": "🌮",
+      "date": "2026-11-01",
+      "location": "Location TBA",
+      "audience": "Family-friendly",
+      "description": "Tacos meet Día de los Muertos! November 1–2 is Mexico's Day of the Dead — a colorful celebration honoring loved ones with food, flowers, and stories. We'll explore the tradition, press fresh tortillas, mix salsas, and build our own tacos. Pick a filling, fold, fiesta!",
+      "ingredients": [
+        "Masa harina (corn flour)",
+        "Chicken or beef (or beans for veggie)",
+        "Onion, garlic, lime",
+        "Tomatoes, cilantro, jalapeño (for salsa)",
+        "Avocado",
+        "Cheese, sour cream"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "korea-bibimbap-2026",
+      "title": "Korea Day — Bibimbap Bowls",
+      "emoji": "🍲",
+      "date": "2026-10-04",
+      "location": "Location TBA",
+      "audience": "Family-friendly",
+      "description": "\"Mixed rice\" in a bowl of color — meet bibimbap. We'll prep five veggie toppings, learn what each one means, then mix it all up the Korean way.",
+      "ingredients": [
+        "Short-grain rice",
+        "Spinach, carrots, zucchini, bean sprouts, mushrooms",
+        "Eggs",
+        "Beef (optional)",
+        "Sesame oil, soy sauce, garlic",
+        "Gochujang (Korean chili paste)"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "international-day-2026",
+      "title": "International Day",
+      "emoji": "🌍",
+      "date": "2026-12-06",
+      "location": "Location TBA",
+      "audience": "All welcome",
+      "description": "A potluck of flavors — every family brings one dish with a story. Music, posters, and a passport stamp for every taste.",
+      "ingredients": [
+        "Bring one dish from your family's heritage",
+        "A short story or memory about the dish (1–2 minutes)"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "senior-home-visit-2027",
+      "title": "Senior Home Visit — Foods of Generations Past",
+      "emoji": "👵",
+      "date": "2027-01-03",
+      "location": "Location TBA",
+      "audience": "All welcome",
+      "description": "We visit a local senior home to listen, cook, and share. Elders tell the stories of the foods that shaped their lives; kids cook alongside them and bring dishes to share. A reminder that every recipe carries a memory.",
+      "ingredients": [
+        "Ingredient list will depend on what dishes the elders choose to share",
+        "We'll share a final list 1 week before the visit"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "china-day-2027",
+      "title": "China Day",
+      "emoji": "🏮",
+      "date": "2027-02-07",
+      "location": "Location TBA",
+      "audience": "All welcome",
+      "description": "A full afternoon of Chinese cuisine and culture — dumplings, noodles, tea, stories, and games. Bring the family!",
+      "ingredients": [
+        "Dumpling wrappers",
+        "Ground pork or chicken (or tofu/mushroom for veggie)",
+        "Napa cabbage, ginger, scallions",
+        "Soy sauce, sesame oil, rice vinegar",
+        "Tea leaves for a tea-tasting station"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "team-mission-season-2027",
+      "title": "Team Mission Season",
+      "emoji": "🎯",
+      "date": "2027-03-07",
+      "dateLabel": "Mar – May 2027",
+      "monthLabel": "Mar–May",
+      "location": "Location TBA",
+      "audience": "Teams of older + younger kids",
+      "description": "Teams form and draw a mission — a country, a dish, a story. Over three months, kids research the history, study the foods and stories from every past Taste the World episode and event (it's needed for the quiz round!), bring their mission to life in any form their crew chooses — talk, skit, stage play, song, poster, video — and practice cooking the dish. Junior Chefs lead, Mini Chefs learn.",
+      "ingredients": [
+        "To be decided by each team based on their drawn mission"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "team-showcase-2027",
+      "title": "Team Showcase & Competition",
+      "emoji": "🏆",
+      "date": "2027-06-06",
+      "location": "Location TBA",
+      "audience": "All welcome to watch & taste",
+      "description": "The big day! Each team shares their country and dish however they've chosen — story, skit, stage play, song, video, or anything in between (Showcase, 80 pts); then a fast-paced food-knowledge quiz round on every past dish and story (Quiz, 20 pts); and finally the awards ceremony. The winning team takes home a **$50 gift card** — and bragging rights until next season.",
+      "ingredients": [
+        "Each team brings ingredients for their chosen dish",
+        "Organizers provide quiz materials and prizes"
+      ],
+      "joinUrl": "#",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    }
+  ]
+}

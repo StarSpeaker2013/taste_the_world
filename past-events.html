@@ -19,40 +19,15 @@
     <div class="container">
       <span class="tag">Past Events</span>
       <h1>Our story so far 📖</h1>
-      <p>Every event we host will live here — with photos, posters, recipes, and the stories the kids shared.</p>
+      <p>Every event we've hosted lives here — with the recipes we cooked, the videos we made, and the memories we shared.</p>
     </div>
   </section>
 
   <section style="padding-top: 1rem;">
-    <div class="container" style="max-width: 760px;">
-      <div class="empty">
-        <span class="big-emoji">🍳</span>
-        <h2>The kitchen is warming up…</h2>
-        <p>
-          Our very first event is just around the corner. Come back soon to see
-          photos, posters, and the dishes we cooked together — or join us and
-          help write the first chapter!
-        </p>
-        <a class="btn primary" href="events.html">See Upcoming Events</a>
-        <a class="btn ghost"   href="videos.html" style="margin-left:.5rem;">Watch Videos</a>
-      </div>
-
-      <div class="cards mt-3">
-        <div class="card teal reveal">
-          <span class="icon">📸</span>
-          <h3>Photos</h3>
-          <p>Snapshots from each gathering — flour-covered hands and proud smiles.</p>
-        </div>
-        <div class="card mustard reveal">
-          <span class="icon">🖼️</span>
-          <h3>Posters</h3>
-          <p>The artwork teams create for each country and dish.</p>
-        </div>
-        <div class="card terracotta reveal">
-          <span class="icon">📜</span>
-          <h3>Stories</h3>
-          <p>Recaps written by the kids — what they learned and loved.</p>
-        </div>
+    <div class="container">
+      <!-- Past events are rendered from data/events.json via main.js -->
+      <div id="past-events" class="event-list">
+        <p class="form-note">Loading…</p>
       </div>
     </div>
   </section>
