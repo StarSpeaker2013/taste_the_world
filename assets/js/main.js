@@ -4,7 +4,8 @@
 // =========================================================
 
 const SITE_NAME = "Taste the World";
-const SITE_EMOJI = "🌍";
+const SITE_LOGO = "logo.png";   // shown in nav, replaces emoji if present
+const SITE_EMOJI = "🌍";        // fallback if no logo image
 const YOUTUBE_URL = "https://www.youtube.com/@Letstastetheworld-w2u";
 const GITHUB_URL = "https://github.com/StarSpeaker2013/taste_the_world";
 
@@ -36,7 +37,9 @@ function renderNav() {
     <header class="nav">
       <div class="container nav-inner">
         <a class="logo" href="index.html">
-          <span class="logo-emoji">${SITE_EMOJI}</span>
+          ${SITE_LOGO
+            ? `<img class="logo-img" src="${SITE_LOGO}" alt="${SITE_NAME} logo">`
+            : `<span class="logo-emoji">${SITE_EMOJI}</span>`}
           ${SITE_NAME}
         </a>
         <button class="nav-toggle" aria-label="Menu">☰ Menu</button>

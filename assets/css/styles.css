@@ -39,6 +39,7 @@ img { max-width: 100%; display: block; }
 
 a { color: var(--terracotta); text-decoration: none; font-weight: 700; }
 a:hover { text-decoration: underline wavy; }
+.logo, .logo:hover { text-decoration: none; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
@@ -92,6 +93,14 @@ section {
   font-size: 1.7rem;
   animation: bob 3s ease-in-out infinite;
   display: inline-block;
+}
+.logo .logo-img {
+  height: 38px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  animation: bob 3s ease-in-out infinite;
+  transform-origin: center;
 }
 @keyframes bob {
   0%, 100% { transform: translateY(0) rotate(-4deg); }
