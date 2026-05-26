@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { href: "past-events.html", label: "Past Events" },
   { href: "teams.html",       label: "Teams" },
   { href: "videos.html",      label: "Videos" },
+  { href: "mascot.html",      label: "Mascot" },
 ];
 
 // ---- Build nav HTML ----

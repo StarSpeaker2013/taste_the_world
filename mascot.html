@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mascot Collection — Taste the World</title>
+  <meta name="description" content="Meet our mascot in every country — collectible stickers, keychains, and plush toys from around the world." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="logo.png" />
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="tag">Mascot Collection</span>
+      <h1>Our mascot, around the world 🌍</h1>
+      <p>
+        Every country we visit, our mascot puts on something new.
+        Collect stickers, keychains, and plush toys — each one tells a story.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 1rem;">
+    <div class="container">
+
+      <!-- Country tabs -->
+      <div class="mascot-tabs" role="tablist" aria-label="Country">
+        <button class="mascot-tab active" data-country="classic" role="tab">⭐ Classic</button>
+        <button class="mascot-tab"        data-country="china"   role="tab">🇨🇳 China</button>
+        <button class="mascot-tab"        data-country="japan"   role="tab">🇯🇵 Japan</button>
+        <button class="mascot-tab"        data-country="korea"   role="tab">🇰🇷 Korea</button>
+        <button class="mascot-tab"        data-country="italy"   role="tab">🇮🇹 Italy</button>
+        <button class="mascot-tab"        data-country="mexico"  role="tab">🇲🇽 Mexico</button>
+      </div>
+
+      <!-- Panels -->
+      <div id="mascot-panels"></div>
+
+      <div class="empty mt-3">
+        <span class="big-emoji">🎁</span>
+        <h2>How do I get them?</h2>
+        <p>
+          Mascot collectibles are earned by joining our monthly events and completing
+          team missions — not sold. Each country you "visit" with us adds a new piece
+          to your collection.
+        </p>
+        <a class="btn primary" href="events.html">See Upcoming Events →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script>
+    // Mascot data — one entry per country with three product images.
+    // "classic" uses the original brand mascot (filenames without a country suffix).
+    const MASCOT_COUNTRIES = {
+      classic: { name: "Classic",  flag: "⭐",  note: "Our original mascot — the one who started it all." },
+      china:   { name: "China",    flag: "🇨🇳", note: "Inspired by dumplings, tea, and the Great Wall." },
+      japan:   { name: "Japan",    flag: "🇯🇵", note: "Inspired by sushi, sakura, and street ramen." },
+      korea:   { name: "Korea",    flag: "🇰🇷", note: "Inspired by kimchi, bibimbap, and hanbok." },
+      italy:   { name: "Italy",    flag: "🇮🇹", note: "Inspired by pasta, pizza, and gelato." },
+      mexico:  { name: "Mexico",   flag: "🇲🇽", note: "Inspired by tacos, mole, and Day of the Dead." },
+    };
+
+    // For the "classic" set, the files are named without a country suffix:
+    //   pic/sticker.png, pic/keyChain.png, pic/toy.png
+    const CLASSIC_FILES = {
+      sticker:  "pic/sticker.png",
+      keychain: "pic/keyChain.png",
+      toy:      "pic/toy.png",
+    };
+
+    // Note: filename casing varies in /pic — we list both common cases and let the browser pick
+    function imgPath(prefix, country) {
+      // Try lower-case country first; if some files use Capitalized, the <img> onerror falls back.
+      return `pic/${prefix}-${country}.png`;
+    }
+    function imgPathAlt(prefix, country) {
+      const cap = country.charAt(0).toUpperCase() + country.slice(1);
+      return `pic/${prefix}-${cap}.png`;
+    }
+
+    function panelHtml(countryKey) {
+      const c = MASCOT_COUNTRIES[countryKey];
+      const isClassic = countryKey === "classic";
+      const items = [
+        { label: "Sticker",  prefix: "sticker"  },
+        { label: "Keychain", prefix: "keychain" },
+        { label: "Plush",    prefix: "toy"      },
+      ];
+      return `
+        <div class="mascot-panel" data-country="${countryKey}">
+          <div class="mascot-country-head">
+            <h2>${c.flag} ${c.name}</h2>
+            <p>${c.note}</p>
+          </div>
+          <div class="mascot-grid">
+            ${items.map(it => {
+              const src    = isClassic ? CLASSIC_FILES[it.prefix] : imgPath(it.prefix, countryKey);
+              const altSrc = isClassic ? CLASSIC_FILES[it.prefix] : imgPathAlt(it.prefix, countryKey);
+              return `
+                <figure class="mascot-card">
+                  <div class="mascot-img-wrap">
+                    <img
+                      src="${src}"
+                      onerror="if(!this.dataset.f){this.dataset.f=1;this.src='${altSrc}';}"
+                      alt="${c.name} ${it.label}"
+                      loading="lazy" />
+                  </div>
+                  <figcaption>
+                    <strong>${it.label}</strong>
+                    <span>${c.name} edition</span>
+                  </figcaption>
+                </figure>
+              `;
+            }).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderMascots() {
+      const mount = document.getElementById("mascot-panels");
+      mount.innerHTML = Object.keys(MASCOT_COUNTRIES).map(panelHtml).join("");
+      showCountry("classic");
+    }
+
+    function showCountry(country) {
+      document.querySelectorAll(".mascot-tab").forEach(t => {
+        t.classList.toggle("active", t.dataset.country === country);
+      });
+      document.querySelectorAll(".mascot-panel").forEach(p => {
+        p.classList.toggle("active", p.dataset.country === country);
+      });
+    }
+
+    document.addEventListener("click", (e) => {
+      const tab = e.target.closest(".mascot-tab");
+      if (tab) showCountry(tab.dataset.country);
+    });
+
+    renderMascots();
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
