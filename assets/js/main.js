@@ -9,6 +9,56 @@ const SITE_EMOJI = "🌍";        // fallback if no logo image
 const YOUTUBE_URL = "https://www.youtube.com/@Letstastetheworld-w2u";
 const GITHUB_URL = "https://github.com/StarSpeaker2013/taste_the_world";
 
+// ---- Join-Us options shown in the modal (edit here site-wide) ----
+const JOIN_FORM_URL = "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit";
+const JOIN_DISCORD_URL = "#"; // optional: paste your Discord invite URL here
+
+// Kick-Off (June 14) dedicated RSVP form — includes waiver, allergy, etc.
+const KICKOFF_RSVP_URL = "https://docs.google.com/forms/d/e/1FAIpQLScYoGW7gK5VGsl7YRMzsSXBXELZYWC3IPuo9j2V59iEnRg8FA/viewform";
+const JOIN_OPTIONS = [
+  {
+    key: "discord",
+    icon: "🎮",
+    title: "Discord Server",
+    desc: "Scan or tap to hop into our Discord community.",
+    qr: "pic/discord-qr.png",
+    url: JOIN_DISCORD_URL,
+  },
+  {
+    key: "wechat",
+    icon: "💬",
+    title: "WeChat Group",
+    desc: "Scan with WeChat to join our parents' chat group.",
+    qr: "pic/wechat-qr.png",
+  },
+  {
+    key: "form",
+    icon: "📝",
+    title: "Sign Up Form",
+    desc: "Fill out a quick form so we can keep you in the loop.",
+    cta: "Open Form ↗",
+    url: JOIN_FORM_URL,
+  },
+];
+
+// ---- Partners / Sponsors (edit here to update site-wide) ----
+const PARTNERS = {
+  parent: {
+    label: "A club of",
+    name: "CAST-LA",
+    logo: "pic/castla-logo.png",
+    url:  "#",
+  },
+  sponsors: [
+    {
+      label: "Venue sponsor",
+      name: "Triple I",
+      logo: "pic/triple-i-logo.png",
+      url:  "#",
+    },
+  ],
+};
+
 const NAV_LINKS = [
   { href: "index.html",       label: "Home" },
   { href: "about.html",       label: "About" },
@@ -53,10 +103,33 @@ function renderNav() {
 }
 
 // ---- Build footer HTML ----
+function partnerCardHtml(p) {
+  if (!p) return "";
+  const inner = `
+    <span class="partner-label">${p.label}</span>
+    <div class="partner-logo-wrap">
+      <img src="${p.logo}" alt="${p.name} logo" class="partner-logo" loading="lazy"
+           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'partner-name-fallback',textContent:'${p.name.replace(/'/g,"\\'")}'}))">
+    </div>
+    <span class="partner-name">${p.name}</span>
+  `;
+  return p.url && p.url !== "#"
+    ? `<a class="partner-card" href="${p.url}" target="_blank" rel="noopener">${inner}</a>`
+    : `<div class="partner-card">${inner}</div>`;
+}
+
 function renderFooter() {
   const year = new Date().getFullYear();
+  const parentHtml = partnerCardHtml(PARTNERS.parent);
+  const sponsorsHtml = (PARTNERS.sponsors || []).map(partnerCardHtml).join("");
+
   return `
     <footer>
+      <div class="partners">
+        ${parentHtml ? `<div class="partners-group">${parentHtml}</div>` : ""}
+        ${sponsorsHtml ? `<div class="partners-group">${sponsorsHtml}</div>` : ""}
+      </div>
+
       <div class="foot-emoji">🌍🍜🥟🌮🥖🍵</div>
       <p>© ${year} ${SITE_NAME} — Every table is a world.</p>
       <p>
@@ -75,7 +148,88 @@ function injectChrome() {
 
   const footerMount = document.getElementById("site-footer");
   if (footerMount) footerMount.outerHTML = renderFooter();
+
+  injectJoinModal();
 }
+
+// =========================================================
+// Join-Us modal (Form / WeChat QR / Discord QR)
+// =========================================================
+function joinOptionHtml(o) {
+  const media = o.qr
+    ? `<div class="join-qr-wrap">
+         <img src="${o.qr}" alt="${o.title} QR code" class="join-qr" loading="lazy"
+              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'join-qr-fallback',innerHTML:'QR coming soon<br><small>(${o.qr})</small>'}))">
+       </div>`
+    : `<div class="join-icon">${o.icon}</div>`;
+
+  const action = o.url && o.url !== "#"
+    ? `<a class="btn primary" href="${o.url}" target="_blank" rel="noopener">${o.cta || "Open ↗"}</a>`
+    : (o.qr ? `<span class="join-hint">📱 Scan the QR code</span>` : "");
+
+  return `
+    <div class="join-option">
+      <div class="join-option-head">
+        <span class="join-option-icon">${o.icon}</span>
+        <h3>${o.title}</h3>
+      </div>
+      ${media}
+      <p class="join-option-desc">${o.desc}</p>
+      ${action}
+    </div>
+  `;
+}
+
+function injectJoinModal() {
+  if (document.getElementById("join-modal")) return;
+  const modal = document.createElement("div");
+  modal.id = "join-modal";
+  modal.className = "join-modal";
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = `
+    <div class="join-backdrop" data-join-close></div>
+    <div class="join-dialog" role="dialog" aria-modal="true" aria-labelledby="join-title">
+      <button class="join-close" aria-label="Close" data-join-close>×</button>
+      <h2 id="join-title">🍜 Join the Taste the World fam!</h2>
+      <p class="join-sub">Pick whichever works best for you — we'll see you soon.</p>
+      <div class="join-options">
+        ${JOIN_OPTIONS.map(joinOptionHtml).join("")}
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+function openJoinModal() {
+  const m = document.getElementById("join-modal");
+  if (!m) return;
+  m.classList.add("open");
+  m.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+function closeJoinModal() {
+  const m = document.getElementById("join-modal");
+  if (!m) return;
+  m.classList.remove("open");
+  m.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+// Open modal for any link/button with data-join, OR an <a href> ending with #join
+document.addEventListener("click", (e) => {
+  const trigger = e.target.closest("[data-join], a[href$='#join']");
+  if (trigger) {
+    e.preventDefault();
+    openJoinModal();
+    return;
+  }
+  if (e.target.closest("[data-join-close]")) {
+    closeJoinModal();
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeJoinModal();
+});
 
 // ---- Mobile nav toggle (delegated, works after injection) ----
 document.addEventListener("click", (e) => {
@@ -154,6 +308,18 @@ function eventCardHtml(e, { past = false } = {}) {
        </details>`
     : "";
 
+  const highlights = (e.highlights && e.highlights.length)
+    ? `<ul class="event-highlights">
+         ${e.highlights.map(h => `<li>${h}</li>`).join("")}
+       </ul>`
+    : "";
+
+  const flyer = e.flyer
+    ? `<a class="event-flyer" href="${e.flyer}" target="_blank" rel="noopener" title="Click to view full flyer">
+         <img src="${e.flyer}" alt="${e.title} flyer" loading="lazy">
+       </a>`
+    : "";
+
   const embed = ytEmbedUrl(e.youtubeUrl);
   const video = past && embed
     ? `<div class="event-video">
@@ -165,7 +331,9 @@ function eventCardHtml(e, { past = false } = {}) {
     ? (e.youtubeUrl
         ? `<a class="btn ghost" href="${e.youtubeUrl}" target="_blank" rel="noopener">Watch recap ↗</a>`
         : `<span class="btn ghost" style="cursor:default;opacity:.7;">Recap coming</span>`)
-    : `<a class="btn primary" href="${e.joinUrl || "#"}" target="_blank" rel="noopener">Request to Join →</a>`;
+    : (e.joinUrl && e.joinUrl !== "#"
+        ? `<a class="btn primary" href="${e.joinUrl}" target="_blank" rel="noopener">RSVP →</a>`
+        : `<a class="btn primary" href="#join" data-join>Request to Join →</a>`);
 
   return `
     <div class="event reveal" id="${e.id}">
@@ -175,8 +343,10 @@ function eventCardHtml(e, { past = false } = {}) {
       </div>
       <div>
         <h3>${e.title}</h3>
+        ${flyer}
         <p>${e.description || ""}</p>
         <small>📅 ${dateLine} &nbsp;•&nbsp; 📍 ${e.location || "Location TBA"} &nbsp;•&nbsp; ${e.audience || ""}</small>
+        ${highlights}
         ${ingredients}
         ${video}
       </div>

@@ -1,15 +1,42 @@
 {
-  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD.",
+  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:00-6:00 PM, at 200 Spectrum Center Dr, Suite 1460.",
 
   "events": [
     {
-      "id": "japan-sushi-2026",
-      "title": "Japan Day — Sushi Stories",
+      "id": "kickoff-2026",
+      "title": "🎉 Kick-Off Event — Taste the World Launch Party!",
+      "emoji": "🚀",
+      "date": "2026-06-14",
+      "dateLabel": "Sun, Jun 14, 2026 • 4:00 – 6:00 PM",
+      "monthLabel": "Jun 14",
+      "location": "200 Spectrum Center Dr, Suite 1460",
+      "audience": "Kids & families — all welcome!",
+      "description": "Our very first event! Come kick off Taste the World with an afternoon of food, stories, and play. Travel station-to-station through hands-on adventures: 🔍 treasure-hunt / escape-room style games, 🧪 food-science mini-experiments, and 📖 history-story challenges where kids guess which historical moment a food belongs to. Collect enough station stamps and earn a ticket to make your own 🧋 bubble tea or 🍭 cotton candy at the prize bar!",
+      "flyer": "pic/KickOffFlyer.jpeg",
+      "highlights": [
+        "🔍 Treasure-hunt & escape-room style games",
+        "🧪 Food-science mini experiments",
+        "📖 Food-history story challenges",
+        "🎫 Stamp your card to unlock bubble-tea & cotton-candy stations"
+      ],
+      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLScYoGW7gK5VGsl7YRMzsSXBXELZYWC3IPuo9j2V59iEnRg8FA/viewform",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "japan-sushi-obon-2026",
+      "title": "Japan — Sushi & Obon Festival",
       "emoji": "🍣",
       "date": "2026-08-02",
-      "location": "Location TBA",
+      "dateLabel": "Sun, Aug 2, 2026 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
       "audience": "Family-friendly",
-      "description": "Travel to Japan through one of the world's most iconic foods. Share the story of sushi, from its origins to the colorful art it is today — and then teach everyone how to roll their own.",
+      "description": "Travel to Japan in mid-summer — Obon (お盆) season, when families welcome ancestors home with lanterns, dance, and food. We'll share the story of Obon, learn the art of sushi, and roll our own colorful maki together.",
+      "highlights": [
+        "🏮 The story of Obon — Japan's lantern festival",
+        "🍣 Hands-on sushi rolling for everyone",
+        "🎎 A taste of Japanese summer traditions"
+      ],
       "ingredients": [
         "Sushi rice",
         "Rice vinegar",
@@ -19,18 +46,129 @@
         "Imitation crab or smoked salmon",
         "Soy sauce, wasabi, pickled ginger"
       ],
-      "joinUrl": "#",
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "italy-tiramisu-2026",
-      "title": "Italy Day — Tiramisu Tales",
-      "emoji": "🍰",
+      "id": "vietnam-springroll-2026",
+      "title": "Vietnam — Fresh Spring Rolls & Pandan Jelly",
+      "emoji": "🌿",
       "date": "2026-09-06",
-      "location": "Location TBA",
+      "dateLabel": "Sun, Sep 6, 2026 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
       "audience": "Family-friendly",
-      "description": "Espresso, mascarpone, cocoa and a name that means \"pick me up.\" We'll explore Italian café culture and layer up our own tiramisu together.",
+      "description": "A trip to Vietnam through two crowd-favorites: Gỏi cuốn (fresh spring rolls) — a translucent, herb-packed roll that's part art project, part healthy snack — and silky green pandan jelly for dessert. We'll learn about Vietnamese street-food culture and roll our own rainbow rolls together.",
+      "highlights": [
+        "🌯 Roll your own Gỏi cuốn (fresh spring rolls)",
+        "🍀 Make pandan jelly from scratch — the 'vanilla of Asia'",
+        "🇻🇳 Stories of Vietnamese street food & herb gardens"
+      ],
+      "ingredients": [
+        "Rice-paper wrappers",
+        "Vermicelli rice noodles",
+        "Shrimp or tofu",
+        "Lettuce, mint, Thai basil, cilantro",
+        "Carrot & cucumber (julienned)",
+        "Hoisin + peanut sauce",
+        "Pandan extract, agar-agar, coconut milk, sugar (for jelly)"
+      ],
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "india-diwali-2026",
+      "title": "India — Diwali Festival of Lights",
+      "emoji": "🪔",
+      "date": "2026-10-04",
+      "dateLabel": "Sun, Oct 4, 2026 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
+      "audience": "Family-friendly",
+      "description": "Diwali — India's Festival of Lights — celebrates the victory of light over darkness. We'll share the story of Diwali, sculpt edible chocolate diyas (lamps you can light AND eat!), and roll quick coconut ladoos — bite-sized sweets traditionally shared with neighbors during the festival.",
+      "highlights": [
+        "🪔 Sculpt your own edible chocolate Diya lamp",
+        "🥥 Roll Instant Coconut Ladoo — no-cook, kid-friendly",
+        "✨ The story of Diwali: light, family, and sweets"
+      ],
+      "ingredients": [
+        "Melting chocolate (dark + white)",
+        "Edible gold dust / sprinkles",
+        "Small candies for 'flames'",
+        "Sweetened condensed milk",
+        "Desiccated coconut",
+        "Cardamom powder",
+        "Pistachios or almonds (chopped)"
+      ],
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "mexico-taco-2026",
+      "title": "Mexico — Tacos & Día de los Muertos",
+      "emoji": "💀",
+      "date": "2026-11-01",
+      "dateLabel": "Sun, Nov 1, 2026 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
+      "audience": "Family-friendly",
+      "description": "Tacos meet Día de los Muertos! November 1–2 is Mexico's Day of the Dead — a colorful celebration honoring loved ones with food, flowers, and stories. We'll explore the tradition, press fresh tortillas, mix salsas, and build our own tacos. Pick a filling, fold, fiesta!",
+      "highlights": [
+        "💀 The joyful story of Día de los Muertos",
+        "🌮 Press your own tortillas & build a taco",
+        "🌶️ Mix-your-own salsa bar (mild to spicy!)"
+      ],
+      "ingredients": [
+        "Masa harina (corn flour)",
+        "Chicken or beef (or beans for veggie)",
+        "Onion, garlic, lime",
+        "Tomatoes, cilantro, jalapeño (for salsa)",
+        "Avocado",
+        "Cheese, sour cream"
+      ],
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "america-gingerbread-2026",
+      "title": "America — Christmas Gingerbread Men & Houses",
+      "emoji": "🎄",
+      "date": "2026-12-06",
+      "dateLabel": "Sun, Dec 6, 2026 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
+      "audience": "Family-friendly",
+      "description": "It's December — let's build a sweet little gingerbread world! We'll bake (or pre-bake) gingerbread men and assemble candy-covered houses, while sharing the cozy story of how gingerbread became a holiday tradition across America and Europe.",
+      "highlights": [
+        "🍪 Decorate gingerbread men with royal icing",
+        "🏠 Build & decorate your own gingerbread house",
+        "🎄 The sweet history of holiday gingerbread"
+      ],
+      "ingredients": [
+        "Pre-baked gingerbread pieces (or dough kit)",
+        "Royal icing (powdered sugar + egg whites)",
+        "Assorted candies (M&Ms, gumdrops, candy canes)",
+        "Sprinkles & edible glitter",
+        "Piping bags"
+      ],
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "france-italy-epiphany-2027",
+      "title": "France & Italy — Epiphany & Tiramisu Tales",
+      "emoji": "👑",
+      "date": "2027-01-03",
+      "dateLabel": "Sun, Jan 3, 2027 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
+      "audience": "Family-friendly",
+      "description": "Welcome the new year European style! Epiphany (Jan 6) closes the Christmas season in France and Italy with kings, queens, and sweet treats. We'll share the stories — including the famous French Galette des Rois — and then layer up an Italian classic: tiramisu, the dessert whose name means 'pick me up.'",
+      "highlights": [
+        "👑 The story of Epiphany & the Three Kings",
+        "🍰 Layer your own personal tiramisu cup",
+        "🇫🇷🇮🇹 Two countries, one sweet New Year tradition"
+      ],
       "ingredients": [
         "Mascarpone cheese",
         "Eggs",
@@ -40,98 +178,33 @@
         "Cocoa powder",
         "Optional: a splash of vanilla"
       ],
-      "joinUrl": "#",
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "mexico-taco-2026",
-      "title": "Mexico Day — Taco Time & Día de los Muertos",
-      "emoji": "🌮",
-      "date": "2026-11-01",
-      "location": "Location TBA",
-      "audience": "Family-friendly",
-      "description": "Tacos meet Día de los Muertos! November 1–2 is Mexico's Day of the Dead — a colorful celebration honoring loved ones with food, flowers, and stories. We'll explore the tradition, press fresh tortillas, mix salsas, and build our own tacos. Pick a filling, fold, fiesta!",
-      "ingredients": [
-        "Masa harina (corn flour)",
-        "Chicken or beef (or beans for veggie)",
-        "Onion, garlic, lime",
-        "Tomatoes, cilantro, jalapeño (for salsa)",
-        "Avocado",
-        "Cheese, sour cream"
-      ],
-      "joinUrl": "#",
-      "youtubeUrl": "",
-      "photoUrl": ""
-    },
-    {
-      "id": "korea-bibimbap-2026",
-      "title": "Korea Day — Bibimbap Bowls",
-      "emoji": "🍲",
-      "date": "2026-10-04",
-      "location": "Location TBA",
-      "audience": "Family-friendly",
-      "description": "\"Mixed rice\" in a bowl of color — meet bibimbap. We'll prep five veggie toppings, learn what each one means, then mix it all up the Korean way.",
-      "ingredients": [
-        "Short-grain rice",
-        "Spinach, carrots, zucchini, bean sprouts, mushrooms",
-        "Eggs",
-        "Beef (optional)",
-        "Sesame oil, soy sauce, garlic",
-        "Gochujang (Korean chili paste)"
-      ],
-      "joinUrl": "#",
-      "youtubeUrl": "",
-      "photoUrl": ""
-    },
-    {
-      "id": "international-day-2026",
-      "title": "International Day",
-      "emoji": "🌍",
-      "date": "2026-12-06",
-      "location": "Location TBA",
-      "audience": "All welcome",
-      "description": "A potluck of flavors — every family brings one dish with a story. Music, posters, and a passport stamp for every taste.",
-      "ingredients": [
-        "Bring one dish from your family's heritage",
-        "A short story or memory about the dish (1–2 minutes)"
-      ],
-      "joinUrl": "#",
-      "youtubeUrl": "",
-      "photoUrl": ""
-    },
-    {
-      "id": "senior-home-visit-2027",
-      "title": "Senior Home Visit — Foods of Generations Past",
-      "emoji": "👵",
-      "date": "2027-01-03",
-      "location": "Location TBA",
-      "audience": "All welcome",
-      "description": "We visit a local senior home to listen, cook, and share. Elders tell the stories of the foods that shaped their lives; kids cook alongside them and bring dishes to share. A reminder that every recipe carries a memory.",
-      "ingredients": [
-        "Ingredient list will depend on what dishes the elders choose to share",
-        "We'll share a final list 1 week before the visit"
-      ],
-      "joinUrl": "#",
-      "youtubeUrl": "",
-      "photoUrl": ""
-    },
-    {
-      "id": "china-day-2027",
-      "title": "China Day",
+      "id": "china-dumpling-yuanxiao-2027",
+      "title": "China — Dumplings & Yuanxiao (Lunar New Year)",
       "emoji": "🏮",
       "date": "2027-02-07",
-      "location": "Location TBA",
-      "audience": "All welcome",
-      "description": "A full afternoon of Chinese cuisine and culture — dumplings, noodles, tea, stories, and games. Bring the family!",
+      "dateLabel": "Sun, Feb 7, 2027 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
+      "audience": "Family-friendly",
+      "description": "Lunar New Year 2027 falls on Feb 6 — we celebrate the day after! Dumplings (饺子) for reunion, and Yuanxiao / Tangyuan (元宵/汤圆) — sweet sticky-rice balls eaten at the Lantern Festival, symbolizing family togetherness. Stories, folding, rolling, eating.",
+      "highlights": [
+        "🥟 Fold your own dumplings (10+ shapes!)",
+        "🏮 Roll Yuanxiao / Tangyuan — sweet sticky-rice balls",
+        "🐉 The stories of Chinese New Year & the Lantern Festival"
+      ],
       "ingredients": [
         "Dumpling wrappers",
         "Ground pork or chicken (or tofu/mushroom for veggie)",
         "Napa cabbage, ginger, scallions",
         "Soy sauce, sesame oil, rice vinegar",
-        "Tea leaves for a tea-tasting station"
+        "Glutinous rice flour",
+        "Black sesame paste or red bean paste (Yuanxiao filling)"
       ],
-      "joinUrl": "#",
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
       "youtubeUrl": "",
       "photoUrl": ""
     },
@@ -140,31 +213,42 @@
       "title": "Team Mission Season",
       "emoji": "🎯",
       "date": "2027-03-07",
-      "dateLabel": "Mar – May 2027",
+      "dateLabel": "Mar – May 2027 • monthly meet-ups",
       "monthLabel": "Mar–May",
-      "location": "Location TBA",
+      "location": "200 Spectrum Center Dr, Suite 1460",
       "audience": "Teams of older + younger kids",
       "description": "Teams form and draw a mission — a country, a dish, a story. Over three months, kids research the history, study the foods and stories from every past Taste the World episode and event (it's needed for the quiz round!), bring their mission to life in any form their crew chooses — talk, skit, stage play, song, poster, video — and practice cooking the dish. Junior Chefs lead, Mini Chefs learn.",
+      "highlights": [
+        "🎲 Draw your team's mission country & dish",
+        "🎭 Bring it to life: skit, song, video — your call",
+        "🍳 Practice cooking the dish for the June finale"
+      ],
       "ingredients": [
         "To be decided by each team based on their drawn mission"
       ],
-      "joinUrl": "#",
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "team-showcase-2027",
-      "title": "Team Showcase & Competition",
+      "id": "culinary-contest-finale-2027",
+      "title": "🏆 Grand Finale — Culinary Contest & Team Showcase",
       "emoji": "🏆",
       "date": "2027-06-06",
-      "location": "Location TBA",
+      "dateLabel": "Sun, Jun 6, 2027 • 4:00 – 6:00 PM",
+      "location": "200 Spectrum Center Dr, Suite 1460",
       "audience": "All welcome to watch & taste",
       "description": "The big day! Each team shares their country and dish however they've chosen — story, skit, stage play, song, video, or anything in between (Showcase, 80 pts); then a fast-paced food-knowledge quiz round on every past dish and story (Quiz, 20 pts); and finally the awards ceremony. The winning team takes home a **$50 gift card** — and bragging rights until next season.",
+      "highlights": [
+        "🎭 Team showcases (80 pts)",
+        "❓ Food-knowledge quiz round (20 pts)",
+        "🏆 Awards ceremony — $50 gift card for the winning team"
+      ],
       "ingredients": [
         "Each team brings ingredients for their chosen dish",
         "Organizers provide quiz materials and prizes"
       ],
-      "joinUrl": "#",
+      "joinUrl": "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit",
       "youtubeUrl": "",
       "photoUrl": ""
     }
