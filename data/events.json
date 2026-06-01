@@ -19,7 +19,10 @@
         "📖 Food-history story challenges",
         "🎫 Stamp your card to unlock bubble-tea & cotton-candy stations"
       ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLScYoGW7gK5VGsl7YRMzsSXBXELZYWC3IPuo9j2V59iEnRg8FA/viewform",
+      "joinUrl": "",
+      "walkIn": true,
+      "notice": "⚠️ Heads up: this event is NOT nut-free. Please check with a volunteer about ingredients before your child tries anything if you have allergies.",
+      "rsvpCountUrl": "",
       "youtubeUrl": "",
       "photoUrl": ""
     },

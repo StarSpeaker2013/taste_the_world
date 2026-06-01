@@ -551,6 +551,68 @@ section {
 .event-flyer:hover { transform: translateY(-3px) rotate(-1deg); text-decoration: none; }
 .event-flyer img { width: 100%; height: auto; display: block; }
 
+/* "X going" RSVP count badge */
+.rsvp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin: .6rem 0 .2rem;
+  padding: .3rem .75rem;
+  background: #e7faf6;
+  border: 2px solid var(--teal);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--ink);
+}
+.rsvp-badge .rsvp-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: rsvpPulse 1.6s ease-in-out infinite;
+  display: inline-block;
+}
+.rsvp-badge .rsvp-count {
+  color: var(--terracotta);
+  font-weight: 800;
+}
+@keyframes rsvpPulse {
+  0%, 100% { transform: scale(1);   opacity: 1;   }
+  50%      { transform: scale(1.6); opacity: .35; }
+}
+
+/* When the badge appears inside the Kick-Off banner (light gradient bg),
+   give it a contrasting white background for readability. */
+.kickoff-banner .rsvp-badge {
+  background: #fff;
+  border-color: var(--ink);
+  margin-top: 0;
+  margin-bottom: .9rem;
+}
+
+/* Event notice — e.g. allergy / heads-up warning shown on cards and banners */
+.event-notice {
+  background: #fff3c2;
+  border: 2px solid var(--mustard);
+  border-left: 6px solid var(--terracotta);
+  border-radius: 12px;
+  padding: .6rem .9rem;
+  margin: .7rem 0;
+  font-size: .95rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.event-notice strong { color: var(--terracotta); }
+
+/* In the Kick-Off banner the notice sits on a colorful gradient,
+   so use a brighter white background for readability. */
+.kickoff-banner .event-notice {
+  background: #fff;
+  margin: 0 0 1rem;
+}
+
 /* Event highlights bullet list */
 .event-highlights {
   list-style: none;

@@ -8,6 +8,7 @@ const SITE_LOGO = "logo.png";   // shown in nav, replaces emoji if present
 const SITE_EMOJI = "🌍";        // fallback if no logo image
 const YOUTUBE_URL = "https://www.youtube.com/@Letstastetheworld-w2u";
 const GITHUB_URL = "https://github.com/StarSpeaker2013/taste_the_world";
+const CONTACT_EMAIL = "tastetheworldclub@gmail.com";
 
 // ---- Join-Us options shown in the modal (edit here site-wide) ----
 const JOIN_FORM_URL = "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit";
@@ -133,9 +134,9 @@ function renderFooter() {
       <div class="foot-emoji">🌍🍜🥟🌮🥖🍵</div>
       <p>© ${year} ${SITE_NAME} — Every table is a world.</p>
       <p>
-        <a href="${YOUTUBE_URL}" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Hello from ' + SITE_NAME + ' website')}">📮 Contact Us</a>
         &nbsp;•&nbsp;
-        <a href="${GITHUB_URL}" target="_blank" rel="noopener">GitHub</a>
+        <a href="${YOUTUBE_URL}" target="_blank" rel="noopener">YouTube</a>
       </p>
     </footer>
   `;
@@ -314,6 +315,10 @@ function eventCardHtml(e, { past = false } = {}) {
        </ul>`
     : "";
 
+  const notice = e.notice
+    ? `<p class="event-notice">${e.notice}</p>`
+    : "";
+
   const flyer = e.flyer
     ? `<a class="event-flyer" href="${e.flyer}" target="_blank" rel="noopener" title="Click to view full flyer">
          <img src="${e.flyer}" alt="${e.title} flyer" loading="lazy">
@@ -331,9 +336,17 @@ function eventCardHtml(e, { past = false } = {}) {
     ? (e.youtubeUrl
         ? `<a class="btn ghost" href="${e.youtubeUrl}" target="_blank" rel="noopener">Watch recap ↗</a>`
         : `<span class="btn ghost" style="cursor:default;opacity:.7;">Recap coming</span>`)
-    : (e.joinUrl && e.joinUrl !== "#"
-        ? `<a class="btn primary" href="${e.joinUrl}" target="_blank" rel="noopener">RSVP →</a>`
-        : `<a class="btn primary" href="#join" data-join>Request to Join →</a>`);
+    : (e.walkIn
+        ? "" // no RSVP button for walk-in events
+        : (e.joinUrl && e.joinUrl !== "#"
+            ? `<a class="btn primary" href="${e.joinUrl}" target="_blank" rel="noopener">RSVP →</a>`
+            : `<a class="btn primary" href="#join" data-join>Request to Join →</a>`));
+
+  const rsvpBadge = (!past && e.rsvpCountUrl)
+    ? `<span class="rsvp-badge" data-rsvp-url="${e.rsvpCountUrl}" data-event-id="${e.id}">
+         <span class="rsvp-dot"></span>👥 <span class="rsvp-count">…</span> going
+       </span>`
+    : "";
 
   return `
     <div class="event reveal" id="${e.id}">
@@ -346,6 +359,8 @@ function eventCardHtml(e, { past = false } = {}) {
         ${flyer}
         <p>${e.description || ""}</p>
         <small>📅 ${dateLine} &nbsp;•&nbsp; 📍 ${e.location || "Location TBA"} &nbsp;•&nbsp; ${e.audience || ""}</small>
+        ${notice}
+        ${rsvpBadge}
         ${highlights}
         ${ingredients}
         ${video}
@@ -353,6 +368,50 @@ function eventCardHtml(e, { past = false } = {}) {
       ${action}
     </div>
   `;
+}
+
+// Fetch RSVP counts for any element with .rsvp-badge and update.
+// Source of truth for the URL is each event's `rsvpCountUrl` in events.json.
+// If a badge has data-event-id, we look up the URL from events.json automatically.
+async function loadRsvpCounts(root = document) {
+  const badges = root.querySelectorAll(".rsvp-badge");
+  if (!badges.length) return;
+
+  // Build event-id -> url map from events.json once
+  let urlMap = {};
+  try {
+    const events = await loadEvents();
+    events.forEach(e => { if (e.rsvpCountUrl) urlMap[e.id] = e.rsvpCountUrl; });
+  } catch { /* ignore — direct data-rsvp-url still works */ }
+
+  badges.forEach(async (badge) => {
+    let url = badge.getAttribute("data-rsvp-url");
+    const eid = badge.getAttribute("data-event-id");
+    if (!url && eid && urlMap[eid]) url = urlMap[eid];
+    if (!url) { badge.style.display = "none"; return; }
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      const n = (data.people != null) ? data.people
+              : (data.families != null) ? data.families
+              : null;
+      const countEl = badge.querySelector(".rsvp-count");
+      if (n != null && countEl) {
+        countEl.textContent = String(n);
+        if (data.people != null && data.families != null) {
+          badge.title = `${data.families} families`;
+        }
+        badge.style.display = ""; // un-hide if it was hidden
+      } else if (countEl) {
+        countEl.textContent = "—";
+        badge.style.display = "";
+      }
+    } catch (err) {
+      console.warn("RSVP count fetch failed:", err);
+      badge.style.display = "none"; // silently hide on failure
+    }
+  });
 }
 
 async function loadEvents() {
@@ -396,6 +455,7 @@ async function renderUpcomingEvents() {
 
   mount.innerHTML = upcoming.map(e => eventCardHtml(e, { past: false })).join("");
   setupReveal();
+  loadRsvpCounts(mount);
 }
 
 async function renderPastEvents() {
@@ -433,6 +493,7 @@ function init() {
   setupReveal();
   renderUpcomingEvents();
   renderPastEvents();
+  loadRsvpCounts(document); // also pick up any hard-coded badges (e.g. home banner)
 }
 
 if (document.readyState === "loading") {
