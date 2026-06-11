@@ -8,7 +8,7 @@
 
 ## 🍜 Taste the World — Event Participation Waiver
 
-**Event:** Kick-Off Event &nbsp; **Date:** Sunday, June 14, 2026 &nbsp; **Location:** 200 Spectrum Center Dr, Suite 1460
+**Event:** Kick-Off Event &nbsp; **Date:** Sunday, June 14, 2026 &nbsp; **Location:** Heritage Community Center
 
 ---
 

@@ -15,7 +15,7 @@
 🎉 We can't wait to see you at our Kick-Off Event!
 
 📅 Sunday, June 14, 2026 • 4:00 – 6:00 PM
-📍 200 Spectrum Center Dr, Suite 1460
+📍 Heritage Community Center
 
 This form takes about 3 minutes. Please fill it out for each family —
 allergy and emergency-contact info are required so we can keep every
@@ -193,7 +193,7 @@ acknowledgment.
 🎉 Thank you! Your RSVP for the Taste the World Kick-Off Event is in.
 
 📅 Sunday, June 14, 2026 • 4:00 – 6:00 PM
-📍 200 Spectrum Center Dr, Suite 1460
+📍 Heritage Community Center
 
 What's next:
 • You'll receive a confirmation email shortly.

@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:00-6:00 PM, at 200 Spectrum Center Dr, Suite 1460.",
+  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:00-6:00 PM, at Heritage Community Center.",
 
   "events": [
     {
@@ -9,7 +9,7 @@
       "date": "2026-06-14",
       "dateLabel": "Sun, Jun 14, 2026 • 4:00 – 6:00 PM",
       "monthLabel": "Jun 14",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Kids & families — all welcome!",
       "description": "Our very first event! Come kick off Taste the World with an afternoon of food, stories, and play. Travel station-to-station through hands-on adventures: 🔍 treasure-hunt / escape-room style games, 🧪 food-science mini-experiments, and 📖 history-story challenges where kids guess which historical moment a food belongs to. Collect enough station stamps and earn a ticket to make your own 🧋 bubble tea or 🍭 cotton candy at the prize bar!",
       "flyer": "pic/KickOffFlyer.jpeg",
@@ -32,7 +32,7 @@
       "emoji": "🍣",
       "date": "2026-08-02",
       "dateLabel": "Sun, Aug 2, 2026 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Travel to Japan in mid-summer — Obon (お盆) season, when families welcome ancestors home with lanterns, dance, and food. We'll share the story of Obon, learn the art of sushi, and roll our own colorful maki together.",
       "highlights": [
@@ -59,7 +59,7 @@
       "emoji": "🌿",
       "date": "2026-09-06",
       "dateLabel": "Sun, Sep 6, 2026 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "A trip to Vietnam through two crowd-favorites: Gỏi cuốn (fresh spring rolls) — a translucent, herb-packed roll that's part art project, part healthy snack — and silky green pandan jelly for dessert. We'll learn about Vietnamese street-food culture and roll our own rainbow rolls together.",
       "highlights": [
@@ -86,7 +86,7 @@
       "emoji": "🪔",
       "date": "2026-10-04",
       "dateLabel": "Sun, Oct 4, 2026 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Diwali — India's Festival of Lights — celebrates the victory of light over darkness. We'll share the story of Diwali, sculpt edible chocolate diyas (lamps you can light AND eat!), and roll quick coconut ladoos — bite-sized sweets traditionally shared with neighbors during the festival.",
       "highlights": [
@@ -113,7 +113,7 @@
       "emoji": "💀",
       "date": "2026-11-01",
       "dateLabel": "Sun, Nov 1, 2026 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Tacos meet Día de los Muertos! November 1–2 is Mexico's Day of the Dead — a colorful celebration honoring loved ones with food, flowers, and stories. We'll explore the tradition, press fresh tortillas, mix salsas, and build our own tacos. Pick a filling, fold, fiesta!",
       "highlights": [
@@ -139,7 +139,7 @@
       "emoji": "🎄",
       "date": "2026-12-06",
       "dateLabel": "Sun, Dec 6, 2026 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "It's December — let's build a sweet little gingerbread world! We'll bake (or pre-bake) gingerbread men and assemble candy-covered houses, while sharing the cozy story of how gingerbread became a holiday tradition across America and Europe.",
       "highlights": [
@@ -164,7 +164,7 @@
       "emoji": "👑",
       "date": "2027-01-03",
       "dateLabel": "Sun, Jan 3, 2027 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Welcome the new year European style! Epiphany (Jan 6) closes the Christmas season in France and Italy with kings, queens, and sweet treats. We'll share the stories — including the famous French Galette des Rois — and then layer up an Italian classic: tiramisu, the dessert whose name means 'pick me up.'",
       "highlights": [
@@ -191,7 +191,7 @@
       "emoji": "🏮",
       "date": "2027-02-07",
       "dateLabel": "Sun, Feb 7, 2027 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Lunar New Year 2027 falls on Feb 6 — we celebrate the day after! Dumplings (饺子) for reunion, and Yuanxiao / Tangyuan (元宵/汤圆) — sweet sticky-rice balls eaten at the Lantern Festival, symbolizing family togetherness. Stories, folding, rolling, eating.",
       "highlights": [
@@ -218,7 +218,7 @@
       "date": "2027-03-07",
       "dateLabel": "Mar – May 2027 • monthly meet-ups",
       "monthLabel": "Mar–May",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "Teams of older + younger kids",
       "description": "Teams form and draw a mission — a country, a dish, a story. Over three months, kids research the history, study the foods and stories from every past Taste the World episode and event (it's needed for the quiz round!), bring their mission to life in any form their crew chooses — talk, skit, stage play, song, poster, video — and practice cooking the dish. Junior Chefs lead, Mini Chefs learn.",
       "highlights": [
@@ -239,7 +239,7 @@
       "emoji": "🏆",
       "date": "2027-06-06",
       "dateLabel": "Sun, Jun 6, 2027 • 4:00 – 6:00 PM",
-      "location": "200 Spectrum Center Dr, Suite 1460",
+      "location": "Heritage Community Center",
       "audience": "All welcome to watch & taste",
       "description": "The big day! Each team shares their country and dish however they've chosen — story, skit, stage play, song, video, or anything in between (Showcase, 80 pts); then a fast-paced food-knowledge quiz round on every past dish and story (Quiz, 20 pts); and finally the awards ceremony. The winning team takes home a **$50 gift card** — and bragging rights until next season.",
       "highlights": [
