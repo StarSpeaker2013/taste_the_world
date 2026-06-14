@@ -11,7 +11,7 @@ const GITHUB_URL = "https://github.com/StarSpeaker2013/taste_the_world";
 const CONTACT_EMAIL = "tastetheworldclub@gmail.com";
 
 // ---- Join-Us options shown in the modal (edit here site-wide) ----
-const JOIN_FORM_URL = "https://docs.google.com/forms/d/1lK3-domkpQVebs_DheBt4IjaxaNd-jzl7lIxN_5FZo4/edit";
+const JOIN_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdL-Aq02keZZsdgJH57eDbtHjSxjwm_f60ij9ETdrwIEyZvjA/viewform?usp=dialog";
 const JOIN_DISCORD_URL = "#"; // optional: paste your Discord invite URL here
 
 // Kick-Off (June 14) dedicated RSVP form — includes waiver, allergy, etc.
