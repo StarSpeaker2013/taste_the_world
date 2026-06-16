@@ -50,14 +50,7 @@ const PARTNERS = {
     logo: "pic/castla-logo.png",
     url:  "#",
   },
-  sponsors: [
-    {
-      label: "Venue sponsor",
-      name: "Triple I",
-      logo: "pic/triple-i-logo.png",
-      url:  "#",
-    },
-  ],
+  sponsors: [],
 };
 
 const NAV_LINKS = [
@@ -104,35 +97,30 @@ function renderNav() {
 }
 
 // ---- Build footer HTML ----
-function partnerCardHtml(p) {
+function clubOfHtml(p) {
   if (!p) return "";
   const inner = `
-    <span class="partner-label">${p.label}</span>
-    <div class="partner-logo-wrap">
-      <img src="${p.logo}" alt="${p.name} logo" class="partner-logo" loading="lazy"
-           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'partner-name-fallback',textContent:'${p.name.replace(/'/g,"\\'")}'}))">
-    </div>
-    <span class="partner-name">${p.name}</span>
+    <span class="club-label">${p.label}</span>
+    <img src="${p.logo}" alt="${p.name} logo" class="club-logo" loading="lazy"
+         onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'club-name',textContent:'${p.name.replace(/'/g,"\\'")}'}))">
+    <span class="club-name">${p.name}</span>
   `;
   return p.url && p.url !== "#"
-    ? `<a class="partner-card" href="${p.url}" target="_blank" rel="noopener">${inner}</a>`
-    : `<div class="partner-card">${inner}</div>`;
+    ? `<a class="club-of" href="${p.url}" target="_blank" rel="noopener">${inner}</a>`
+    : `<span class="club-of">${inner}</span>`;
 }
 
 function renderFooter() {
   const year = new Date().getFullYear();
-  const parentHtml = partnerCardHtml(PARTNERS.parent);
-  const sponsorsHtml = (PARTNERS.sponsors || []).map(partnerCardHtml).join("");
+  const clubHtml = clubOfHtml(PARTNERS.parent);
 
   return `
     <footer>
-      <div class="partners">
-        ${parentHtml ? `<div class="partners-group">${parentHtml}</div>` : ""}
-        ${sponsorsHtml ? `<div class="partners-group">${sponsorsHtml}</div>` : ""}
-      </div>
-
       <div class="foot-emoji">🌍🍜🥟🌮🥖🍵</div>
-      <p>© ${year} ${SITE_NAME} — Every table is a world.</p>
+      <p class="copyright-line">
+        <span>© ${year} ${SITE_NAME} — Every table is a world.</span>
+        ${clubHtml}
+      </p>
       <p>
         <a href="mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Hello from ' + SITE_NAME + ' website')}">📮 Contact Us</a>
         &nbsp;•&nbsp;
@@ -216,12 +204,13 @@ function closeJoinModal() {
   document.body.style.overflow = "";
 }
 
-// Open modal for any link/button with data-join, OR an <a href> ending with #join
+// "Join Us" links/buttons (data-join or href ending with #join) go straight
+// to the Sign Up Form instead of opening the modal.
 document.addEventListener("click", (e) => {
   const trigger = e.target.closest("[data-join], a[href$='#join']");
   if (trigger) {
     e.preventDefault();
-    openJoinModal();
+    window.open(JOIN_FORM_URL, "_blank", "noopener");
     return;
   }
   if (e.target.closest("[data-join-close]")) {

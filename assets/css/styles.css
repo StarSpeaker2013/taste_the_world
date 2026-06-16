@@ -828,6 +828,42 @@ footer {
 footer .foot-emoji { font-size: 2rem; }
 footer a { color: var(--mustard); }
 
+/* Copyright line with inline "A club of" badge */
+.copyright-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem 1rem;
+}
+.club-of {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.92;
+  transition: opacity 0.15s ease;
+}
+a.club-of:hover { opacity: 1; }
+.club-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.club-logo {
+  height: 22px;
+  max-width: 90px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.club-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* Partners / Sponsors in footer */
 .partners {
   display: flex;
