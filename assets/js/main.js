@@ -314,6 +314,23 @@ function eventCardHtml(e, { past = false } = {}) {
        </a>`
     : "";
 
+  // Optional photo gallery: array of strings ("pic/x.jpg") or
+  // objects ({ src, caption }). Renders a small clickable thumbnail grid.
+  const gallery = (e.gallery && e.gallery.length)
+    ? `<div class="event-gallery">
+         ${e.gallery.map((g) => {
+           const src = typeof g === "string" ? g : g.src;
+           const caption = typeof g === "string" ? "" : (g.caption || "");
+           if (!src) return "";
+           const alt = caption || `${e.title} photo`;
+           return `<a class="event-gallery-item" href="${src}" target="_blank" rel="noopener"${caption ? ` title="${caption.replace(/"/g, "&quot;")}"` : ""}>
+                     <img src="${src}" alt="${alt.replace(/"/g, "&quot;")}" loading="lazy">
+                     ${caption ? `<span class="event-gallery-caption">${caption}</span>` : ""}
+                   </a>`;
+         }).join("")}
+       </div>`
+    : "";
+
   const embed = ytEmbedUrl(e.youtubeUrl);
   const video = past && embed
     ? `<div class="event-video">
@@ -346,6 +363,7 @@ function eventCardHtml(e, { past = false } = {}) {
       <div>
         <h3>${e.title}</h3>
         ${flyer}
+        ${gallery}
         <p>${e.description || ""}</p>
         <small>📅 ${dateLine} &nbsp;•&nbsp; 📍 ${e.location || "Location TBA"} &nbsp;•&nbsp; ${e.audience || ""}</small>
         ${notice}
@@ -420,6 +438,127 @@ function todayMidnight() {
   return new Date(t.getFullYear(), t.getMonth(), t.getDate());
 }
 
+// Auto "🔜 NEXT UP" banner shown at the top of the home page.
+// Renders the soonest upcoming event into #home-next-event using the
+// existing .kickoff-banner styles. Hides itself if nothing is upcoming.
+async function renderHomeNextEvent() {
+  const mount = document.getElementById("home-next-event");
+  if (!mount) return;
+
+  const events = await loadEvents();
+  const today = todayMidnight();
+  const upcoming = events
+    .filter(e => {
+      const d = parseEventDate(e.date);
+      return d && d >= today;
+    })
+    .sort((a, b) => parseEventDate(a.date) - parseEventDate(b.date));
+
+  if (!upcoming.length) {
+    mount.innerHTML = "";
+    return;
+  }
+
+  const e = upcoming[0];
+  const d = parseEventDate(e.date);
+  const dateLine = e.dateLabel || (d ? formatLongDate(d) : "Date TBA");
+
+  // Collect ALL hero images: flyer (if any) + every gallery image.
+  // When the event has 2+ images the banner auto-rotates between them.
+  const galleryUrls = (e.gallery || [])
+    .map(g => (typeof g === "string" ? g : g.src))
+    .filter(Boolean);
+  const heroImages = [e.flyer, ...galleryUrls]
+    .filter(Boolean)
+    .filter((src, i, arr) => arr.indexOf(src) === i); // dedupe
+
+  let heroHtml;
+  if (heroImages.length) {
+    const first = heroImages[0];
+    // Stash full list on the wrapper so setupNextEventRotation() can cycle through.
+    const imgsAttr = heroImages.join("|");
+    heroHtml = `
+      <a class="kickoff-flyer" href="events.html#${e.id}" title="See full event details"
+         data-rotate-images="${imgsAttr}">
+        <img src="${first}" alt="${e.title}" loading="lazy" class="kickoff-flyer-img">
+      </a>`;
+  } else {
+    heroHtml = `
+      <a class="kickoff-flyer kickoff-flyer-emoji" href="events.html#${e.id}" title="See full event details">
+        <span class="kickoff-emoji">${e.emoji || "🍽️"}</span>
+      </a>`;
+  }
+
+  const pills = (e.highlights && e.highlights.length)
+    ? `<ul class="kickoff-pills">
+         ${e.highlights.slice(0, 3).map(h => `<li>${h}</li>`).join("")}
+       </ul>`
+    : "";
+
+  const rsvpBadge = e.rsvpCountUrl
+    ? `<span class="rsvp-badge" data-rsvp-url="${e.rsvpCountUrl}" data-event-id="${e.id}">
+         <span class="rsvp-dot"></span>👥 <span class="rsvp-count">…</span> going
+       </span>`
+    : "";
+
+  const rsvpBtn = e.walkIn
+    ? `<a class="btn primary" href="events.html#${e.id}">Event details →</a>`
+    : (e.joinUrl && e.joinUrl !== "#"
+        ? `<a class="btn primary" href="${e.joinUrl}" target="_blank" rel="noopener">RSVP →</a>`
+        : `<a class="btn primary" href="#join" data-join>Request to Join →</a>`);
+
+  mount.innerHTML = `
+    <aside class="kickoff-banner" data-banner-tag="🔜 NEXT UP" aria-label="Next upcoming event">
+      ${heroHtml}
+      <div class="kickoff-body">
+        <h2>${e.emoji ? e.emoji + " " : ""}${e.title}</h2>
+        <p class="kickoff-when">📅 ${dateLine}</p>
+        <p class="kickoff-where">📍 ${e.location || "Location TBA"}${e.audience ? " &nbsp;•&nbsp; " + e.audience : ""}</p>
+        ${rsvpBadge}
+        ${pills}
+        <div class="kickoff-cta">
+          ${rsvpBtn}
+          <a class="btn ghost" href="events.html">All events →</a>
+        </div>
+      </div>
+    </aside>
+  `;
+
+  loadRsvpCounts(mount);
+  setupNextEventRotation(mount);
+}
+
+// Cycle through every image stashed in data-rotate-images (pipe-separated)
+// every N seconds with a soft fade. No-ops if only 0 or 1 image.
+function setupNextEventRotation(root = document) {
+  const wrap = root.querySelector(".kickoff-flyer[data-rotate-images]");
+  if (!wrap) return;
+  const imgEl = wrap.querySelector("img.kickoff-flyer-img");
+  if (!imgEl) return;
+
+  const images = (wrap.getAttribute("data-rotate-images") || "")
+    .split("|")
+    .map(s => s.trim())
+    .filter(Boolean);
+  if (images.length < 2) return;
+
+  // Pre-load the rest so swaps are instant (no flicker).
+  images.slice(1).forEach(src => { const p = new Image(); p.src = src; });
+
+  const ROTATE_MS = 4000;
+  const FADE_MS = 350;
+  let idx = 0;
+
+  setInterval(() => {
+    idx = (idx + 1) % images.length;
+    imgEl.style.opacity = "0";
+    setTimeout(() => {
+      imgEl.src = images[idx];
+      imgEl.style.opacity = "1";
+    }, FADE_MS);
+  }, ROTATE_MS);
+}
+
 async function renderUpcomingEvents() {
   const mount = document.getElementById("upcoming-events");
   if (!mount) return;
@@ -480,6 +619,7 @@ async function renderPastEvents() {
 function init() {
   injectChrome();
   setupReveal();
+  renderHomeNextEvent();
   renderUpcomingEvents();
   renderPastEvents();
   loadRsvpCounts(document); // also pick up any hard-coded badges (e.g. home banner)

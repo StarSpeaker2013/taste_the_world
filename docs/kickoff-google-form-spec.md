@@ -14,7 +14,7 @@
 ```
 🎉 We can't wait to see you at our Kick-Off Event!
 
-📅 Sunday, June 14, 2026 • 4:00 – 6:00 PM
+📅 Sunday, June 14, 2026 • 4:15 – 5:45 PM
 📍 Heritage Community Center
 
 This form takes about 3 minutes. Please fill it out for each family —
@@ -192,7 +192,7 @@ acknowledgment.
 ```
 🎉 Thank you! Your RSVP for the Taste the World Kick-Off Event is in.
 
-📅 Sunday, June 14, 2026 • 4:00 – 6:00 PM
+📅 Sunday, June 14, 2026 • 4:15 – 5:45 PM
 📍 Heritage Community Center
 
 What's next:

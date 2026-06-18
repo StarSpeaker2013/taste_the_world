@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:00-6:00 PM, at Heritage Community Center.",
+  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:15-5:45 PM, at Heritage Community Center.",
 
   "events": [
     {
@@ -7,7 +7,7 @@
       "title": "🎉 Kick-Off Event — Taste the World Launch Party!",
       "emoji": "🚀",
       "date": "2026-06-14",
-      "dateLabel": "Sun, Jun 14, 2026 • 4:00 – 6:00 PM",
+      "dateLabel": "Sun, Jun 14, 2026 • 4:15 – 5:45 PM",
       "monthLabel": "Jun 14",
       "location": "200 Spectrum Center Dr, Suite 1460",
       "audience": "Kids & families — all welcome!",
@@ -27,45 +27,18 @@
       "photoUrl": ""
     },
     {
-      "id": "japan-sushi-obon-2026",
-      "title": "Japan — Sushi & Obon Festival",
-      "emoji": "🍣",
-      "date": "2026-08-02",
-      "dateLabel": "Sun, Aug 2, 2026 • 4:00 – 6:00 PM",
-      "location": "Heritage Community Center",
-      "audience": "Family-friendly",
-      "description": "Travel to Japan in mid-summer — Obon (お盆) season, when families welcome ancestors home with lanterns, dance, and food. We'll share the story of Obon, learn the art of sushi, and roll our own colorful maki together.",
-      "highlights": [
-        "🏮 The story of Obon — Japan's lantern festival",
-        "🍣 Hands-on sushi rolling for everyone",
-        "🎎 A taste of Japanese summer traditions"
-      ],
-      "ingredients": [
-        "Sushi rice",
-        "Rice vinegar",
-        "Nori (seaweed)",
-        "Cucumber",
-        "Avocado",
-        "Imitation crab or smoked salmon",
-        "Soy sauce, wasabi, pickled ginger"
-      ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfRkzTacSg0O6HFA7_r-hBx_8-GCkAVy4DMgQGmiptKYs5lpA/viewform",
-      "youtubeUrl": "",
-      "photoUrl": ""
-    },
-    {
-      "id": "vietnam-springroll-2026",
-      "title": "Vietnam — Fresh Spring Rolls & Pandan Jelly",
+      "id": "vietnam-springroll-pandan-2026",
+      "title": "Vietnam — Fresh Spring Rolls & Pandan Sweets",
       "emoji": "🌿",
-      "date": "2026-09-06",
-      "dateLabel": "Sun, Sep 6, 2026 • 4:00 – 6:00 PM",
+      "date": "2026-08-02",
+      "dateLabel": "Sun, Aug 2, 2026 • 4:15 – 5:45 PM",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
-      "description": "A trip to Vietnam through two crowd-favorites: Gỏi cuốn (fresh spring rolls) — a translucent, herb-packed roll that's part art project, part healthy snack — and silky green pandan jelly for dessert. We'll learn about Vietnamese street-food culture and roll our own rainbow rolls together.",
+      "description": "A summer trip to Vietnam through two crowd-favorites: Gỏi cuốn (fresh spring rolls) — a translucent, herb-packed roll that's part art project, part healthy snack — and silky green pandan desserts. We'll learn about Vietnamese street-food culture, roll our own rainbow rolls, and discover why pandan is called the 'vanilla of Asia.'",
       "highlights": [
         "🌯 Roll your own Gỏi cuốn (fresh spring rolls)",
-        "🍀 Make pandan jelly from scratch — the 'vanilla of Asia'",
-        "🇻🇳 Stories of Vietnamese street food & herb gardens"
+        "🍀 Make pandan jelly & coconut-pandan dessert from scratch",
+        "🇻🇳 Stories of Vietnamese street food, herb gardens & the magical pandan leaf"
       ],
       "ingredients": [
         "Rice-paper wrappers",
@@ -74,36 +47,69 @@
         "Lettuce, mint, Thai basil, cilantro",
         "Carrot & cucumber (julienned)",
         "Hoisin + peanut sauce",
-        "Pandan extract, agar-agar, coconut milk, sugar (for jelly)"
+        "Pandan extract / fresh pandan leaves",
+        "Agar-agar, coconut milk, sugar (for jelly & dessert)"
+      ],
+      "gallery": [
+        { "src": "pic/Vietnam/springrolls.jpg", "caption": "Gỏi cuốn (fresh spring rolls)" },
+        { "src": "pic/Vietnam/pandan1.jpg",    "caption": "Pandan dessert" },
+        { "src": "pic/Vietnam/pandan2.jpg",    "caption": "More pandan goodness" }
+      ],
+      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfRkzTacSg0O6HFA7_r-hBx_8-GCkAVy4DMgQGmiptKYs5lpA/viewform",
+      "youtubeUrl": "",
+      "photoUrl": ""
+    },
+    {
+      "id": "china-mooncake-2026",
+      "title": "China — Mid-Autumn Mooncakes",
+      "emoji": "🥮",
+      "date": "2026-09-06",
+      "dateLabel": "Sun, Sep 6, 2026 • 4:15 – 5:45 PM",
+      "location": "Heritage Community Center",
+      "audience": "Family-friendly",
+      "description": "Celebrate China's Mid-Autumn Festival (中秋节) — the night families gather under the full moon to share stories, lanterns, and mooncakes (月饼). We'll share the legend of Chang'e flying to the moon, knead and stamp our own mini mooncakes with beautiful patterns, and taste classic fillings together.",
+      "highlights": [
+        "🌕 The legend of Chang'e & the Mid-Autumn Festival",
+        "🥮 Stamp your own mini mooncakes with traditional molds",
+        "🏮 Try classic fillings: lotus seed, red bean & custard"
+      ],
+      "ingredients": [
+        "Mooncake dough (flour, golden syrup, alkaline water, oil)",
+        "Snow-skin / bing-pi flour (for no-bake option)",
+        "Lotus seed paste",
+        "Red bean paste",
+        "Custard or milk-powder filling",
+        "Salted egg yolks (optional, traditional)",
+        "Mooncake molds & egg wash"
       ],
       "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeFb5GKTIUdQia2Lg2HPYbGNkT_Ws5xg3ZBm_p0JxgyC42z_Q/viewform?usp=dialog",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "india-diwali-2026",
-      "title": "India — Diwali Festival of Lights",
-      "emoji": "🪔",
+      "id": "japan-sushi-2026",
+      "title": "Japan — Sushi Around Japan",
+      "emoji": "🍣",
       "date": "2026-10-04",
-      "dateLabel": "Sun, Oct 4, 2026 • 4:00 – 6:00 PM",
+      "dateLabel": "Sun, Oct 4, 2026 • 4:15 – 5:45 PM",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
-      "description": "Diwali — India's Festival of Lights — celebrates the victory of light over darkness. We'll share the story of Diwali, sculpt edible chocolate diyas (lamps you can light AND eat!), and roll quick coconut ladoos — bite-sized sweets traditionally shared with neighbors during the festival.",
+      "description": "Travel across Japan through its most beloved food — sushi! From hand-rolled temaki cones to colorful maki rolls, pressed oshizushi, and bite-sized nigiri, we'll learn the stories behind each style and craft our own sushi platter together.",
       "highlights": [
-        "🪔 Sculpt your own edible chocolate Diya lamp",
-        "🥥 Roll Instant Coconut Ladoo — no-cook, kid-friendly",
-        "✨ The story of Diwali: light, family, and sweets"
+        "🍣 Roll maki (rolled sushi) with rainbow fillings",
+        "🍙 Shape nigiri & wrap temaki hand-cones",
+        "🇯🇵 Discover the regional sushi styles of Japan"
       ],
       "ingredients": [
-        "Melting chocolate (dark + white)",
-        "Edible gold dust / sprinkles",
-        "Small candies for 'flames'",
-        "Sweetened condensed milk",
-        "Desiccated coconut",
-        "Cardamom powder",
-        "Pistachios or almonds (chopped)"
+        "Sushi rice",
+        "Rice vinegar, sugar, salt (for seasoning)",
+        "Nori (seaweed sheets)",
+        "Cucumber, avocado, carrot",
+        "Imitation crab, smoked salmon, tuna (or tofu/egg for veggie)",
+        "Tobiko / sesame seeds",
+        "Soy sauce, wasabi, pickled ginger"
       ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLScum9dW_vzMiJghBlnxJijhrkDR2VJPXg988Q-2IhilDcGP-A/viewform?usp=publish-editor",
+      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSccA4dKsBtioWEREH736RhO-QGFPV74jYqadGBzUV_hF1dhkg/viewform?usp=dialog",
       "youtubeUrl": "",
       "photoUrl": ""
     },
@@ -112,7 +118,7 @@
       "title": "Mexico — Tacos & Día de los Muertos",
       "emoji": "💀",
       "date": "2026-11-01",
-      "dateLabel": "Sun, Nov 1, 2026 • 4:00 – 6:00 PM",
+      "dateLabel": "Sun, Nov 1, 2026 • 4:15 – 5:45 PM",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Tacos meet Día de los Muertos! November 1–2 is Mexico's Day of the Dead — a colorful celebration honoring loved ones with food, flowers, and stories. We'll explore the tradition, press fresh tortillas, mix salsas, and build our own tacos. Pick a filling, fold, fiesta!",
@@ -138,7 +144,7 @@
       "title": "America — Christmas Gingerbread Men & Houses",
       "emoji": "🎄",
       "date": "2026-12-06",
-      "dateLabel": "Sun, Dec 6, 2026 • 4:00 – 6:00 PM",
+      "dateLabel": "Sun, Dec 6, 2026 • 4:15 – 5:45 PM",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "It's December — let's build a sweet little gingerbread world! We'll bake (or pre-bake) gingerbread men and assemble candy-covered houses, while sharing the cozy story of how gingerbread became a holiday tradition across America and Europe.",
@@ -163,7 +169,7 @@
       "title": "France & Italy — Epiphany & Tiramisu Tales",
       "emoji": "👑",
       "date": "2027-01-03",
-      "dateLabel": "Sun, Jan 3, 2027 • 4:00 – 6:00 PM",
+      "dateLabel": "Sun, Jan 3, 2027 • 4:15 – 5:45 PM",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Welcome the new year European style! Epiphany (Jan 6) closes the Christmas season in France and Italy with kings, queens, and sweet treats. We'll share the stories — including the famous French Galette des Rois — and then layer up an Italian classic: tiramisu, the dessert whose name means 'pick me up.'",
@@ -190,7 +196,7 @@
       "title": "China — Dumplings & Yuanxiao (Lunar New Year)",
       "emoji": "🏮",
       "date": "2027-02-07",
-      "dateLabel": "Sun, Feb 7, 2027 • 4:00 – 6:00 PM",
+      "dateLabel": "Sun, Feb 7, 2027 • 4:15 – 5:45 PM",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
       "description": "Lunar New Year 2027 falls on Feb 6 — we celebrate the day after! Dumplings (饺子) for reunion, and Yuanxiao / Tangyuan (元宵/汤圆) — sweet sticky-rice balls eaten at the Lantern Festival, symbolizing family togetherness. Stories, folding, rolling, eating.",
@@ -238,7 +244,7 @@
       "title": "🏆 Grand Finale — Culinary Contest & Team Showcase",
       "emoji": "🏆",
       "date": "2027-06-06",
-      "dateLabel": "Sun, Jun 6, 2027 • 4:00 – 6:00 PM",
+      "dateLabel": "Sun, Jun 6, 2027 • 4:15 – 5:45 PM",
       "location": "Heritage Community Center",
       "audience": "All welcome to watch & taste",
       "description": "The big day! Each team shares their country and dish however they've chosen — story, skit, stage play, song, video, or anything in between (Showcase, 80 pts); then a fast-paced food-knowledge quiz round on every past dish and story (Quiz, 20 pts); and finally the awards ceremony. The winning team takes home a **$50 gift card** — and bragging rights until next season.",
