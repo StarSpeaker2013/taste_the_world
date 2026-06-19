@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:15-5:45 PM, at Heritage Community Center.",
+  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:15-5:45 PM, at Heritage Community Center. Note: Only the Aug/Sep/Oct 2026 events are fully announced; later months are placeholders marked 'Coming Soon'.",
 
   "events": [
     {
@@ -114,150 +114,92 @@
       "photoUrl": ""
     },
     {
-      "id": "mexico-taco-2026",
-      "title": "Mexico — Tacos & Día de los Muertos",
-      "emoji": "💀",
+      "id": "coming-soon-2026-11",
+      "title": "🔜 Coming Soon",
+      "emoji": "🔜",
       "date": "2026-11-01",
       "dateLabel": "Sun, Nov 1, 2026 • 4:15 – 5:45 PM",
+      "monthLabel": "Nov",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
-      "description": "Tacos meet Día de los Muertos! November 1–2 is Mexico's Day of the Dead — a colorful celebration honoring loved ones with food, flowers, and stories. We'll explore the tradition, press fresh tortillas, mix salsas, and build our own tacos. Pick a filling, fold, fiesta!",
-      "highlights": [
-        "💀 The joyful story of Día de los Muertos",
-        "🌮 Press your own tortillas & build a taco",
-        "🌶️ Mix-your-own salsa bar (mild to spicy!)"
-      ],
-      "ingredients": [
-        "Masa harina (corn flour)",
-        "Chicken or beef (or beans for veggie)",
-        "Onion, garlic, lime",
-        "Tomatoes, cilantro, jalapeño (for salsa)",
-        "Avocado",
-        "Cheese, sour cream"
-      ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfKxq-QtI38gqRyqtF6FDdumFWczyUei_cV8NpIDCe46bN34Q/viewform?usp=publish-editor",
+      "description": "Our November country and dish are still simmering! Stay tuned — the full lineup will be revealed soon.",
+      "walkIn": true,
+      "joinUrl": "",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "america-gingerbread-2026",
-      "title": "America — Christmas Gingerbread Men & Houses",
-      "emoji": "🎄",
+      "id": "coming-soon-2026-12",
+      "title": "🔜 Coming Soon",
+      "emoji": "🔜",
       "date": "2026-12-06",
       "dateLabel": "Sun, Dec 6, 2026 • 4:15 – 5:45 PM",
+      "monthLabel": "Dec",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
-      "description": "It's December — let's build a sweet little gingerbread world! We'll bake (or pre-bake) gingerbread men and assemble candy-covered houses, while sharing the cozy story of how gingerbread became a holiday tradition across America and Europe.",
-      "highlights": [
-        "🍪 Decorate gingerbread men with royal icing",
-        "🏠 Build & decorate your own gingerbread house",
-        "🎄 The sweet history of holiday gingerbread"
-      ],
-      "ingredients": [
-        "Pre-baked gingerbread pieces (or dough kit)",
-        "Royal icing (powdered sugar + egg whites)",
-        "Assorted candies (M&Ms, gumdrops, candy canes)",
-        "Sprinkles & edible glitter",
-        "Piping bags"
-      ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdFWDxkoS3jeQORIgoOhdddjDU3Fw9J1JIkwF2aXMgbapiUlg/viewform?usp=publish-editor",
+      "description": "Our December country and dish are still simmering! Stay tuned — the full lineup will be revealed soon.",
+      "walkIn": true,
+      "joinUrl": "",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "france-italy-epiphany-2027",
-      "title": "France & Italy — Epiphany & Tiramisu Tales",
-      "emoji": "👑",
+      "id": "coming-soon-2027-01",
+      "title": "🔜 Coming Soon",
+      "emoji": "🔜",
       "date": "2027-01-03",
       "dateLabel": "Sun, Jan 3, 2027 • 4:15 – 5:45 PM",
+      "monthLabel": "Jan",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
-      "description": "Welcome the new year European style! Epiphany (Jan 6) closes the Christmas season in France and Italy with kings, queens, and sweet treats. We'll share the stories — including the famous French Galette des Rois — and then layer up an Italian classic: tiramisu, the dessert whose name means 'pick me up.'",
-      "highlights": [
-        "👑 The story of Epiphany & the Three Kings",
-        "🍰 Layer your own personal tiramisu cup",
-        "🇫🇷🇮🇹 Two countries, one sweet New Year tradition"
-      ],
-      "ingredients": [
-        "Mascarpone cheese",
-        "Eggs",
-        "Sugar",
-        "Ladyfingers (savoiardi)",
-        "Strong espresso (cooled)",
-        "Cocoa powder",
-        "Optional: a splash of vanilla"
-      ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfmTgIPsjVNkWMHZRtOqUYysZ_lbmmM64OUBNDMXn4q2uIc4A/viewform?usp=publish-editor",
+      "description": "Our January country and dish are still simmering! Stay tuned — the full lineup will be revealed soon.",
+      "walkIn": true,
+      "joinUrl": "",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "china-dumpling-yuanxiao-2027",
-      "title": "China — Dumplings & Yuanxiao (Lunar New Year)",
-      "emoji": "🏮",
+      "id": "coming-soon-2027-02",
+      "title": "🔜 Coming Soon",
+      "emoji": "🔜",
       "date": "2027-02-07",
       "dateLabel": "Sun, Feb 7, 2027 • 4:15 – 5:45 PM",
+      "monthLabel": "Feb",
       "location": "Heritage Community Center",
       "audience": "Family-friendly",
-      "description": "Lunar New Year 2027 falls on Feb 6 — we celebrate the day after! Dumplings (饺子) for reunion, and Yuanxiao / Tangyuan (元宵/汤圆) — sweet sticky-rice balls eaten at the Lantern Festival, symbolizing family togetherness. Stories, folding, rolling, eating.",
-      "highlights": [
-        "🥟 Fold your own dumplings (10+ shapes!)",
-        "🏮 Roll Yuanxiao / Tangyuan — sweet sticky-rice balls",
-        "🐉 The stories of Chinese New Year & the Lantern Festival"
-      ],
-      "ingredients": [
-        "Dumpling wrappers",
-        "Ground pork or chicken (or tofu/mushroom for veggie)",
-        "Napa cabbage, ginger, scallions",
-        "Soy sauce, sesame oil, rice vinegar",
-        "Glutinous rice flour",
-        "Black sesame paste or red bean paste (Yuanxiao filling)"
-      ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeyeqdc38a_qP9V8C9lgyCnsdNEr_vNSYm8RfdTvS4DEKWhWQ/viewform?usp=publish-editor",
+      "description": "Our February country and dish are still simmering! Stay tuned — the full lineup will be revealed soon.",
+      "walkIn": true,
+      "joinUrl": "",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "team-mission-season-2027",
-      "title": "Team Mission Season",
-      "emoji": "🎯",
+      "id": "coming-soon-2027-03",
+      "title": "🔜 Coming Soon",
+      "emoji": "🔜",
       "date": "2027-03-07",
-      "dateLabel": "Mar – May 2027 • monthly meet-ups",
-      "monthLabel": "Mar–May",
+      "dateLabel": "Spring 2027 • monthly meet-ups",
+      "monthLabel": "Spring",
       "location": "Heritage Community Center",
-      "audience": "Teams of older + younger kids",
-      "description": "Teams form and draw a mission — a country, a dish, a story. Over three months, kids research the history, study the foods and stories from every past Taste the World episode and event (it's needed for the quiz round!), bring their mission to life in any form their crew chooses — talk, skit, stage play, song, poster, video — and practice cooking the dish. Junior Chefs lead, Mini Chefs learn.",
-      "highlights": [
-        "🎲 Draw your team's mission country & dish",
-        "🎭 Bring it to life: skit, song, video — your call",
-        "🍳 Practice cooking the dish for the June finale"
-      ],
-      "ingredients": [
-        "To be decided by each team based on their drawn mission"
-      ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdXz6ZQSphhE2eKFxWGDudjYOpejAomOqb-CHtMThFcfyEIXw/viewform?usp=dialog",
+      "audience": "Family-friendly",
+      "description": "More hands-on cooking adventures are on the way for spring 2027! Stay tuned — the full lineup will be revealed soon.",
+      "walkIn": true,
+      "joinUrl": "",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
-      "id": "culinary-contest-finale-2027",
-      "title": "🏆 Grand Finale — Culinary Contest & Team Showcase",
-      "emoji": "🏆",
+      "id": "coming-soon-2027-06",
+      "title": "🔜 Coming Soon",
+      "emoji": "🔜",
       "date": "2027-06-06",
       "dateLabel": "Sun, Jun 6, 2027 • 4:15 – 5:45 PM",
+      "monthLabel": "Jun",
       "location": "Heritage Community Center",
-      "audience": "All welcome to watch & taste",
-      "description": "The big day! Each team shares their country and dish however they've chosen — story, skit, stage play, song, video, or anything in between (Showcase, 80 pts); then a fast-paced food-knowledge quiz round on every past dish and story (Quiz, 20 pts); and finally the awards ceremony. The winning team takes home a **$50 gift card** — and bragging rights until next season.",
-      "highlights": [
-        "🎭 Team showcases (80 pts)",
-        "❓ Food-knowledge quiz round (20 pts)",
-        "🏆 Awards ceremony — $50 gift card for the winning team"
-      ],
-      "ingredients": [
-        "Each team brings ingredients for their chosen dish",
-        "Organizers provide quiz materials and prizes"
-      ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdjc5SO7DUMchBDbIcjQaUEGy9egfTt3hhHd_Otxre_VGTVXA/viewform?usp=dialog",
+      "audience": "Family-friendly",
+      "description": "A special season finale is in the works for June 2027! Stay tuned — details will be revealed soon.",
+      "walkIn": true,
+      "joinUrl": "",
       "youtubeUrl": "",
       "photoUrl": ""
     }
