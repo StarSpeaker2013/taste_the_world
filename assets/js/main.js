@@ -615,6 +615,51 @@ async function renderPastEvents() {
   setupReveal();
 }
 
+// ---- Hero photo carousel (home page) ----
+function setupHeroCarousel() {
+  const carousel = document.getElementById("hero-carousel");
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll(".carousel-img"));
+  if (slides.length < 2) return;
+
+  const dotsWrap = document.getElementById("hero-carousel-dots");
+  let index = slides.findIndex(s => s.classList.contains("is-active"));
+  if (index < 0) index = 0;
+
+  // Build navigation dots
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Show photo ${i + 1}`);
+    if (i === index) dot.classList.add("is-active");
+    dot.addEventListener("click", () => show(i, true));
+    dotsWrap && dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function show(next, fromClick) {
+    slides[index].classList.remove("is-active");
+    dots[index] && dots[index].classList.remove("is-active");
+    index = (next + slides.length) % slides.length;
+    slides[index].classList.add("is-active");
+    dots[index] && dots[index].classList.add("is-active");
+    if (fromClick) restart();
+  }
+
+  let timer;
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(() => show(index + 1, false), 4000);
+  }
+
+  // Pause on hover for readability
+  carousel.addEventListener("mouseenter", () => clearInterval(timer));
+  carousel.addEventListener("mouseleave", restart);
+
+  restart();
+}
+
 // ---- Boot ----
 function init() {
   injectChrome();
@@ -622,6 +667,7 @@ function init() {
   renderHomeNextEvent();
   renderUpcomingEvents();
   renderPastEvents();
+  setupHeroCarousel();
   loadRsvpCounts(document); // also pick up any hard-coded badges (e.g. home banner)
 }
 
