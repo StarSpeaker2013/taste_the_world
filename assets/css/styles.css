@@ -632,11 +632,27 @@ section {
   text-align: center;
   line-height: 1.25;
 }
+.event-photos {
+  margin-top: 1rem;
+}
+.event-photos h4 {
+  margin-bottom: .55rem;
+  font-size: 1.15rem;
+}
+.event-photos .event-gallery {
+  max-width: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.event-photos .event-gallery-item img {
+  height: 160px;
+}
 @media (max-width: 640px) {
-  .event-gallery {
+  .event-gallery,
+  .event-photos .event-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .event-gallery-item img { height: 110px; }
+  .event-gallery-item img,
+  .event-photos .event-gallery-item img { height: 110px; }
 }
 
 /* "X going" RSVP count badge */

@@ -22,6 +22,7 @@ const path = require("path");
 // Add more paths here if other pages need the same treatment.
 const FOLDERS = [
   "pic/Event/August",
+  "pic/Event/September",
 ];
 
 const IMAGE_EXT = new Set([".jpg", ".jpeg", ".png", ".gif", ".webp"]);

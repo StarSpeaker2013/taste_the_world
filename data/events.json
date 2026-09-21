@@ -55,6 +55,14 @@
         { "src": "pic/Vietnam/pandan1.jpg",    "caption": "Pandan dessert" },
         { "src": "pic/Vietnam/pandan2.jpg",    "caption": "More pandan goodness" }
       ],
+      "eventPhotos": [
+        "pic/Event/August/404.jpg",
+        "pic/Event/August/405.jpg",
+        "pic/Event/August/406.jpg",
+        "pic/Event/August/407.jpg",
+        "pic/Event/August/410.jpg",
+        "pic/Event/August/411.jpg"
+      ],
       "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfRkzTacSg0O6HFA7_r-hBx_8-GCkAVy4DMgQGmiptKYs5lpA/viewform",
       "youtubeUrl": "",
       "photoUrl": ""
@@ -85,23 +93,33 @@
       "gallery": [
         { "src": "pic/China/mooncake.jpeg", "caption": "Snow-skin mooncakes (冰皮月饼)" }
       ],
+      "eventPhotos": [
+        "pic/Event/September/1.jpg",
+        "pic/Event/September/2.jpg",
+        "pic/Event/September/3.jpg",
+        "pic/Event/September/4.jpg",
+        "pic/Event/September/5.jpg",
+        "pic/Event/September/6.jpg"
+      ],
       "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeFb5GKTIUdQia2Lg2HPYbGNkT_Ws5xg3ZBm_p0JxgyC42z_Q/viewform?usp=dialog",
       "youtubeUrl": "",
       "photoUrl": ""
     },
     {
       "id": "japan-sushi-2026",
-      "title": "Japan — Sushi Around Japan",
+      "title": "Japan & Korea — Sushi and Gimbap",
       "emoji": "🍣",
       "date": "2026-10-04",
-      "dateLabel": "Sun, Oct 4, 2026 • 4:00 – 5:30 PM",
+      "dateLabel": "Sun, Oct 4, 2026 • 4:00 – 5:45 PM",
       "location": "Harvard Community Center, 14701 Harvard Ave, Irvine, CA 92606",
       "audience": "Family-friendly",
-      "description": "Travel across Japan through its most beloved food — sushi! From hand-rolled temaki cones to colorful maki rolls, pressed oshizushi, and bite-sized nigiri, we'll learn the stories behind each style and craft our own sushi platter together.",
+      "description": "Do you know how sushi began or how many kinds of sushi there are? This October, we'll explore the stories and varieties of sushi, then make Japanese sushi and Korean gimbap together. Come roll, taste, and discover with us!",
+      "flyer": "pic/Japan/sushi-flyer-en.svg",
+      "flyerZh": "pic/Japan/sushi-flyer-zh.svg",
       "highlights": [
-        "🍣 Roll maki (rolled sushi) with rainbow fillings",
-        "🍙 Shape nigiri & wrap temaki hand-cones",
-        "🇯🇵 Discover the regional sushi styles of Japan"
+        "🍣 Discover the origins and varieties of sushi",
+        "🇯🇵 Make colorful Japanese sushi",
+        "🇰🇷 Roll Korean gimbap together"
       ],
       "ingredients": [
         "Sushi rice",
@@ -112,7 +130,7 @@
         "Tobiko / sesame seeds",
         "Soy sauce, wasabi, pickled ginger"
       ],
-      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSccA4dKsBtioWEREH736RhO-QGFPV74jYqadGBzUV_hF1dhkg/viewform?usp=dialog",
+      "joinUrl": "https://forms.gle/94ZixYvZDjfPoDJ37",
       "youtubeUrl": "",
       "photoUrl": ""
     },

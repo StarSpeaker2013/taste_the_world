@@ -311,7 +311,8 @@ function eventCardHtml(e, { past = false } = {}) {
   const flyer = e.flyer
     ? `<a class="event-flyer" href="${e.flyer}" target="_blank" rel="noopener" title="Click to view full flyer">
          <img src="${e.flyer}" alt="${e.title} flyer" loading="lazy">
-       </a>`
+       </a>
+       ${e.flyerZh ? `<a class="flyer-language-link" href="${e.flyerZh}" target="_blank" rel="noopener">查看中文海报 ↗</a>` : ""}`
     : "";
 
   // Optional photo gallery: array of strings ("pic/x.jpg") or
@@ -329,6 +330,25 @@ function eventCardHtml(e, { past = false } = {}) {
                    </a>`;
          }).join("")}
        </div>`
+    : "";
+
+  // Event-day photos are separate from dish previews and only appear in the archive.
+  const eventPhotos = (past && e.eventPhotos && e.eventPhotos.length)
+    ? `<section class="event-photos" aria-label="Photos from ${e.title}">
+         <h4>📸 Event Photos</h4>
+         <div class="event-gallery">
+           ${e.eventPhotos.map((photo, index) => {
+             const src = typeof photo === "string" ? photo : photo.src;
+             const caption = typeof photo === "string" ? "" : (photo.caption || "");
+             if (!src) return "";
+             const alt = caption || `${e.title} event photo ${index + 1}`;
+             return `<a class="event-gallery-item" href="${src}" target="_blank" rel="noopener">
+                       <img src="${src}" alt="${alt.replace(/"/g, "&quot;")}" loading="lazy">
+                       ${caption ? `<span class="event-gallery-caption">${caption}</span>` : ""}
+                     </a>`;
+           }).join("")}
+         </div>
+       </section>`
     : "";
 
   const embed = ytEmbedUrl(e.youtubeUrl);
@@ -368,6 +388,7 @@ function eventCardHtml(e, { past = false } = {}) {
         <small>📅 ${dateLine} &nbsp;•&nbsp; 📍 ${e.location || "Location TBA"} &nbsp;•&nbsp; ${e.audience || ""}</small>
         ${notice}
         ${rsvpBadge}
+        ${eventPhotos}
         ${highlights}
         ${ingredients}
         ${video}
