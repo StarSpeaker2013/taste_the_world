@@ -358,7 +358,9 @@ function eventCardHtml(e, { past = false } = {}) {
        </div>`
     : "";
 
-  const action = past
+  const action = e.recapUrl
+    ? `<a class="btn primary" href="${e.recapUrl}">中文简报 →</a>`
+    : past
     ? (e.youtubeUrl
         ? `<a class="btn ghost" href="${e.youtubeUrl}" target="_blank" rel="noopener">Watch recap ↗</a>`
         : `<span class="btn ghost" style="cursor:default;opacity:.7;">Recap coming</span>`)

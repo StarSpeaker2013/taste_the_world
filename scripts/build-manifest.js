@@ -23,6 +23,7 @@ const path = require("path");
 const FOLDERS = [
   "pic/Event/August",
   "pic/Event/September",
+  "pic/Japan",
 ];
 
 const IMAGE_EXT = new Set([".jpg", ".jpeg", ".png", ".gif", ".webp"]);
