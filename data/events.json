@@ -165,8 +165,8 @@
         { "src": "pic/Thailand/bua-loy.jpg", "caption": "Bua Loy in coconut milk" },
         { "src": "pic/Thailand/thai-roti.jpg", "caption": "Thai banana roti" }
       ],
-      "walkIn": true,
-      "joinUrl": "",
+      "walkIn": false,
+      "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeR7kMq9Jw13CKr9sl3gfKRUawa-ud34b6UksXEx3MpgAZkNQ/viewform?usp=publish-editor",
       "youtubeUrl": "",
       "photoUrl": ""
     },
