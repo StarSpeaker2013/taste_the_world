@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Default schedule: 1st Sunday of each month, 4:15-5:45 PM, at Heritage Community Center. Note: Only the Aug/Sep/Oct 2026 events are fully announced; later months are placeholders marked 'Coming Soon'.",
+  "_comment": "Single source of truth for all Taste the World events. Edit this file (directly on GitHub or locally) to add / update / remove events. The site renders Upcoming vs Past automatically based on each event's `date`. Date format: YYYY-MM-DD. Events are usually held on the 1st Sunday of each month at Heritage Community Center; check each event for its confirmed date and time.",
 
   "events": [
     {
@@ -147,15 +147,24 @@
       "photoUrl": ""
     },
     {
-      "id": "coming-soon-2026-11",
-      "title": "🔜 Coming Soon",
-      "emoji": "🔜",
-      "date": "2026-11-01",
-      "dateLabel": "Sun, Nov 1, 2026 • 4:00 – 5:30 PM",
-      "monthLabel": "Nov",
-      "location": "Heritage Community Center",
+      "id": "thailand-loy-krathong-2026",
+      "title": "Thailand — Loy Krathong, Bua Loy & Thai Roti",
+      "emoji": "🇹🇭",
+      "date": "2026-11-08",
+      "dateLabel": "Sun, Nov 8, 2026 • 4:00 – 5:30 PM",
+      "monthLabel": "Nov 8",
+      "location": "Harvard Community Center",
       "audience": "Family-friendly",
-      "description": "Our November country and dish are still simmering! Stay tuned — the full lineup will be revealed soon.",
+      "description": "Celebrate Thailand's Loy Krathong festival, known for floating decorated baskets as a symbol of gratitude and new beginnings. We'll discover the traditions behind this beautiful celebration and make two favorite Thai treats together: colorful Bua Loy rice-flour dumplings in warm coconut milk and crisp, flaky Thai roti.",
+      "highlights": [
+        "🪷 Discover the traditions and meaning of Loy Krathong",
+        "🥣 Make colorful Bua Loy in warm coconut milk",
+        "🫓 Cook crisp, flaky Thai roti together"
+      ],
+      "gallery": [
+        { "src": "pic/Thailand/bua-loy.jpg", "caption": "Bua Loy in coconut milk" },
+        { "src": "pic/Thailand/thai-roti.jpg", "caption": "Thai banana roti" }
+      ],
       "walkIn": true,
       "joinUrl": "",
       "youtubeUrl": "",
