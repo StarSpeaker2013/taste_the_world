@@ -21,9 +21,10 @@ const path = require("path");
 // Folders (relative to repo root) whose images should be listed.
 // Add more paths here if other pages need the same treatment.
 const FOLDERS = [
-  "pic/Event/August",
-  "pic/Event/September",
-  "pic/Event/October",
+  "pic/Event/2026_08",
+  "pic/Event/2026_09",
+  "pic/Event/2026_10",
+  "pic/Event/2026_11",
 ];
 
 const IMAGE_EXT = new Set([".jpg", ".jpeg", ".png", ".gif", ".webp"]);

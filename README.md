@@ -83,8 +83,9 @@ This repo is already set up for GitHub Pages.
   (CHOC).
 - **Past Events** — events move to `past-events.html` automatically after
   their date. Update their entry in `data/events.json` with photos or recap links.
-- **Event photos** — keep event-day photos in `pic/Event/<Month>/` (for example,
-  `pic/Event/October/`), separate from country-specific dish previews and flyers.
+- **Event photos** — keep event-day photos in `pic/Event/YYYY_MM/` using the
+  event's year and zero-padded month (for example, `pic/Event/2026_11/`),
+  separate from country-specific dish previews and flyers.
   Update the event's `eventPhotos` paths and any recap or carousel references.
   For carousel folders, update `FOLDERS` in `scripts/build-manifest.js` and run
   `node scripts/build-manifest.js` to generate their image lists.

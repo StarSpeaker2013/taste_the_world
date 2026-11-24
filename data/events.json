@@ -56,12 +56,12 @@
         { "src": "pic/Vietnam/pandan2.jpg",    "caption": "More pandan goodness" }
       ],
       "eventPhotos": [
-        "pic/Event/August/404.jpg",
-        "pic/Event/August/405.jpg",
-        "pic/Event/August/406.jpg",
-        "pic/Event/August/407.jpg",
-        "pic/Event/August/410.jpg",
-        "pic/Event/August/411.jpg"
+        "pic/Event/2026_08/404.jpg",
+        "pic/Event/2026_08/405.jpg",
+        "pic/Event/2026_08/406.jpg",
+        "pic/Event/2026_08/407.jpg",
+        "pic/Event/2026_08/410.jpg",
+        "pic/Event/2026_08/411.jpg"
       ],
       "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfRkzTacSg0O6HFA7_r-hBx_8-GCkAVy4DMgQGmiptKYs5lpA/viewform",
       "youtubeUrl": "",
@@ -94,12 +94,12 @@
         { "src": "pic/China/mooncake.jpeg", "caption": "Snow-skin mooncakes (冰皮月饼)" }
       ],
       "eventPhotos": [
-        "pic/Event/September/1.jpg",
-        "pic/Event/September/2.jpg",
-        "pic/Event/September/3.jpg",
-        "pic/Event/September/4.jpg",
-        "pic/Event/September/5.jpg",
-        "pic/Event/September/6.jpg"
+        "pic/Event/2026_09/1.jpg",
+        "pic/Event/2026_09/2.jpg",
+        "pic/Event/2026_09/3.jpg",
+        "pic/Event/2026_09/4.jpg",
+        "pic/Event/2026_09/5.jpg",
+        "pic/Event/2026_09/6.jpg"
       ],
       "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeFb5GKTIUdQia2Lg2HPYbGNkT_Ws5xg3ZBm_p0JxgyC42z_Q/viewform?usp=dialog",
       "youtubeUrl": "",
@@ -132,15 +132,15 @@
       ],
       "recapUrl": "japan-event-recap.html",
       "eventPhotos": [
-        "pic/Event/October/22.jpeg",
-        "pic/Event/October/26.jpeg",
-        "pic/Event/October/28.jpeg",
-        "pic/Event/October/29.jpeg",
-        "pic/Event/October/30.jpeg",
-        "pic/Event/October/31.jpeg",
-        "pic/Event/October/35.jpeg",
-        "pic/Event/October/46.jpeg",
-        "pic/Event/October/6A8B8CF9-35CA-41C2-9CE0-34E8CBC279DD.jpeg"
+        "pic/Event/2026_10/22.jpeg",
+        "pic/Event/2026_10/26.jpeg",
+        "pic/Event/2026_10/28.jpeg",
+        "pic/Event/2026_10/29.jpeg",
+        "pic/Event/2026_10/30.jpeg",
+        "pic/Event/2026_10/31.jpeg",
+        "pic/Event/2026_10/35.jpeg",
+        "pic/Event/2026_10/46.jpeg",
+        "pic/Event/2026_10/6A8B8CF9-35CA-41C2-9CE0-34E8CBC279DD.jpeg"
       ],
       "joinUrl": "https://forms.gle/94ZixYvZDjfPoDJ37",
       "youtubeUrl": "",
@@ -164,6 +164,14 @@
       "gallery": [
         { "src": "pic/Thailand/bua-loy.jpg", "caption": "Bua Loy in coconut milk" },
         { "src": "pic/Thailand/thai-roti.jpg", "caption": "Thai banana roti" }
+      ],
+      "eventPhotos": [
+        "pic/Event/2026_11/IMG_8533.jpeg",
+        "pic/Event/2026_11/IMG_8542.jpeg",
+        "pic/Event/2026_11/IMG_8545.jpeg",
+        "pic/Event/2026_11/IMG_8551.jpeg",
+        "pic/Event/2026_11/IMG_8553.jpeg",
+        "pic/Event/2026_11/IMG_8557.jpeg"
       ],
       "walkIn": false,
       "joinUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeR7kMq9Jw13CKr9sl3gfKRUawa-ud34b6UksXEx3MpgAZkNQ/viewform?usp=publish-editor",
