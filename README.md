@@ -83,6 +83,11 @@ This repo is already set up for GitHub Pages.
   (CHOC).
 - **Past Events** — events move to `past-events.html` automatically after
   their date. Update their entry in `data/events.json` with photos or recap links.
+- **Event photos** — keep event-day photos in `pic/Event/<Month>/` (for example,
+  `pic/Event/October/`), separate from country-specific dish previews and flyers.
+  Update the event's `eventPhotos` paths and any recap or carousel references.
+  For carousel folders, update `FOLDERS` in `scripts/build-manifest.js` and run
+  `node scripts/build-manifest.js` to generate their image lists.
 - **Colors** — tweak CSS variables in `assets/css/styles.css` under `:root`.
 
 **YouTube channel:** <https://www.youtube.com/@Letstastetheworld-w2u>
