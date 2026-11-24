@@ -75,10 +75,14 @@ This repo is already set up for GitHub Pages.
   your new hero video ID once it's ready.
 - **Add a video** — in `videos.html`, copy an existing `.video-card` block,
   change the YouTube `embed/VIDEO_ID`, and update the title/description.
-- **Events** — edit the cards in `events.html`. Each card uses the `.event`
-  block.
-- **Past Events** — once you've held your first event, copy an `.event` block
-  into `past-events.html` (and remove the empty state).
+- **Events** — edit `data/events.json`; the home-page preview and upcoming
+  event cards are rendered automatically. Include confirmed dates, locations,
+  registration links, and any special pricing or donation instructions in the
+  event details. The December 6, 2026 Christmas special is free, sponsored by
+  CAST-LA, and collects wish-list gifts for Children's Hospital of Orange County
+  (CHOC).
+- **Past Events** — events move to `past-events.html` automatically after
+  their date. Update their entry in `data/events.json` with photos or recap links.
 - **Colors** — tweak CSS variables in `assets/css/styles.css` under `:root`.
 
 **YouTube channel:** <https://www.youtube.com/@Letstastetheworld-w2u>
